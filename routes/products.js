@@ -13,7 +13,6 @@ const searchListings = require("../views/products/searchlistings");
 const router = express.Router();
 
 router.get('/', async (req,res) => {
-    console.log(req.session.cartId)
 let cart
     if (!req.session.cartId) {
         //create a cart
