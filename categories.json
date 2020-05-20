@@ -1,0 +1,126 @@
+[
+  {
+    "name": "Popular",
+    "metatitle": "",
+    "metadescription": "",
+    "description": "",
+    "categoryUrl": "Popular",
+    "products": [
+      {
+        "id": "5f39d3c5",
+        "position": 0
+      },
+      {
+        "id": "343fe303",
+        "position": 0
+      },
+      {
+        "id": "f65666ad",
+        "position": 0
+      },
+      {
+        "id": "2375517a",
+        "position": 0
+      },
+      {
+        "id": "5145c353",
+        "position": 0
+      }
+    ],
+    "id": "e96fdfb4"
+  },
+  {
+    "name": "Appetisers",
+    "metatitle": "",
+    "metadescription": "",
+    "description": "",
+    "categoryUrl": "Appetisers",
+    "products": [
+      {
+        "id": "693e481f",
+        "position": 0
+      },
+      {
+        "id": "09b85014",
+        "position": 0
+      },
+      {
+        "id": "86bc614b",
+        "position": 0
+      },
+      {
+        "id": "2deb4388",
+        "position": 0
+      },
+      {
+        "id": "64558c7b",
+        "position": 0
+      },
+      {
+        "id": "0c5c1432",
+        "position": 0
+      }
+    ],
+    "id": "3bc6ecb6"
+  },
+  {
+    "name": "Soups",
+    "metatitle": "",
+    "metadescription": "",
+    "description": "",
+    "categoryUrl": "Soups",
+    "products": [
+      {
+        "id": "3c232b4e",
+        "position": 0
+      },
+      {
+        "id": "4a014229",
+        "position": 0
+      },
+      {
+        "id": "cb516893",
+        "position": 0
+      },
+      {
+        "id": "0874349f",
+        "position": 0
+      },
+      {
+        "id": "228eac31",
+        "position": 0
+      }
+    ],
+    "id": "39d328b2"
+  },
+  {
+    "name": "Seafood Dishes",
+    "metatitle": "",
+    "metadescription": "",
+    "description": "",
+    "categoryUrl": "Seafood_Dishes",
+    "products": [
+      {
+        "id": "cea1d195",
+        "position": 0
+      },
+      {
+        "id": "e66ef9de",
+        "position": 0
+      },
+      {
+        "id": "83d1f082",
+        "position": 0
+      },
+      {
+        "id": "c7b58f05",
+        "position": 0
+      },
+      {
+        "id": "869a6c92",
+        "position": 0
+      }
+    ],
+    "id": "956455c2"
+  }
+]
