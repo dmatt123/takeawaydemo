@@ -33,13 +33,13 @@ line-height: 1.34; }
 }
 
   .header-banner {
-    height: 55vh;
+    height: 75vh;
     background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../images/headerGraphic.jpg);
     background-size: cover;
     background-position: top;
     position: relative;
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 45vh, 0 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 45vh, 0 100%); 
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 65vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 65vh, 0 100%); 
     margin-bottom: 5rem;}
 
     .header-banner__text-box {
@@ -278,6 +278,7 @@ font-size: 1.5rem;
 }
 
 @media (max-width: 500px) {
+
   .header-banner__text-box { 
   font-size: 3rem;
   letter-spacing: 1.5rem;
