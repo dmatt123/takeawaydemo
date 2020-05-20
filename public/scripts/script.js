@@ -58,7 +58,7 @@ async function deleteCartItem(prodId, cartId) {
 const inputbox = document.getElementById("inputBoxPostcode")
 
 
-inputbox.addEventListener("keypress", function(e){ 
+inputbox.addEventListener("keyup", function(e){ 
 if (inputbox.value.length >= 2) {
     document.getElementById("postcodeInput").style.display="none";
     document.getElementById("postcodeSuccessMsg").style.display="block";

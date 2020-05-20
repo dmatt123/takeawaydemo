@@ -113,28 +113,16 @@
   {
     "items": [
       {
-        "id": "5f39d3c5",
-        "title": "Deep Fried Shredded Crispy Chicken",
-        "price": "6.10",
-        "quantity": 1
-      },
-      {
         "id": "343fe303",
         "title": "Curried Chicken",
         "price": "6.10",
-        "quantity": 1
-      },
-      {
-        "id": "f65666ad",
-        "title": "Salt & Pepper Chicken",
-        "price": "6.10",
-        "quantity": 1
+        "quantity": 2
       },
       {
         "id": "2375517a",
         "title": "Chicken Balls in Batter",
         "price": "6.10",
-        "quantity": 1
+        "quantity": 2
       }
     ],
     "discount": [],
