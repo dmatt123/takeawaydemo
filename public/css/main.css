@@ -186,6 +186,7 @@ box-shadow: 2px -1px 6px -1px rgba(0,0,0,0.42);
   margin-right: 10vw;
   font-size: 1.2rem;
   animation: showText 1s ease-out;
+  border-radius: 10px;
   
 }
 
