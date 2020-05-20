@@ -18,8 +18,7 @@ let cart
         //create a cart
         cart = await cartsRepo.create({ items: [], discount: [] });
         req.session.cartId = cart.id;
-    };
-
+    } 
 
 if (req.query.search) { 
     let query = req.query.search
