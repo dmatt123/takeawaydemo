@@ -19,6 +19,8 @@ module.exports = ({ content, links }) => {
 <div id="postcodeInput">
 <span class="postcodeInput_text">Check if we deliver to your area</span> <input id="inputBoxPostcode" placeholder="ENTER YOUR POSTCODE"/></div>
 <div id="postcodeSuccessMsg"></div>
+<div id="postcodeFailureMsg"></div>
+
 </header>
       <body>
       <div id="userNotification" class="">

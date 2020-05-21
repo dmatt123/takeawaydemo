@@ -103,16 +103,15 @@ await cartsRepo.update(cart.id, cart)
 
 //get order complete page
 router.get("/cart/review", async (req, res) => {
-  const categories = await categoryRepo.getAll()
   if (!req.session.cartId) {
     res.redirect("/");
   }
 
   const cart = await cartsRepo.getOne(req.session.cartId);
-  res.send(orderCompleteTemplate({categories}));
+  res.send(orderCompleteTemplate({cart}));
 });
 
-router.post("/cart/review", async (req, res) => {
+router.post("/cart/review/confirm", async (req, res) => {
   if (!req.session.cartId) {
     res.redirect("/");
   }
@@ -134,12 +133,6 @@ router.post("/cart/review", async (req, res) => {
 
 
 for (item of cart.items) {
-  const orders = await ordersRepo.getAll()
-  const product = await productsRepo.getOne(item.id)
-  item.price = product.price
-  item.title = product.title
-  item.url = product.productUrl
-  item.image = product.image
   orderTotal += item.quantity * item.price
 }
 

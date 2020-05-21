@@ -1,61 +1,56 @@
-const layout = require("../layout");
+const layout = require("../checkoutLayout");
 const { getError } = require("../helpers");
 
-module.exports = ({ errors, categories }) => {
-    const cats = categories.map(categories => {
-        return `
-        <a class="navbar-item" href="/department/${categories.categoryUrl}">
-        ${categories.name}</a>`
-     
-      }).join('\n')
+module.exports = ({ errors, cart}) => {
+let orderTotal = 0
+let itemTotal = 0
+let currentCart = ''
+
+for (items of cart.items) {
+itemTotal = items.quantity * items.price
+itemTotal = (Math.round(itemTotal * 100) / 100).toFixed(2)
+
+currentCart += `  <p class="cartItem">${items.title} <span class="cartMultiplier"> X <span class="cartQty">${items.quantity}</span> </span>  <span class="cartPrice"> £${itemTotal} </span> <button onclick=deleteCartItem("${items.id}","${cart.id}") class="deleteCartItem">X </button> </p>`
+orderTotal += items.quantity * items.price
+}
+orderTotal = (Math.round(orderTotal * 100) / 100).toFixed(2)
+
   return layout({
-      links: `${cats}`,
     content: `
-    <div class="columns is-centered">
-      <div class="column is-half">
-        <h1 class="subtitle">Delivery Details</h1>
+  
+    <div class="cartReview">  <h4 class="cartHeading">Your Order</h4>
+    ${currentCart}
+    
+    Order Total: £${orderTotal}</div>
 
-        <form method="POST">
+    
+    <div class="deliveryForm">
 
-          <div class="field">
-            <label class="label">First Name</label>
-            <input class="input" placeholder="First Name" name="firstName">
-          </div>
+        <form method="POST" action="/cart/review/confirm">
 
-          <div class="field">
-          <label class="label">Surname</label>
-          <input class="input" placeholder="Surname" name="surname">
-        </div>
+            <input class="standardInput-firstName" placeholder="First Name" name="firstName">
 
-        <div class="field">
-        <label class="label">Email</label>
-        <input class="input" placeholder="Email" name="email">
-      </div>
+          <input class="standardInput-surname" placeholder="Surname" name="surname">
+
+        <input class="standardInput-email" placeholder="Email" name="email">
           
-          <div class="field">
-           <label class="label">1st Line of Address</label>
-           <input class="input" placeholder="1st Line of Address" name="firstLineDel">
-          </div>
-
-          <div class="field">
-          <label class="label">2nd Line of Address</label>
-          <input class="input" placeholder="2nd Line of Address" name="secondLineDel">
-         </div>
-
-          <div class="field">
-          <label class="label">Postcode</label>
-          <input class="input" placeholder="Postcode" name="postcode">
-         </div>
-
-         <div class="field">
-         <label class="label">Telephone Number</label>
-         <input class="input" placeholder="Tel No." name="telNumber">
-        </div>
+           <input class="standardInput-firstLineAdd" placeholder="1st Line of Address" name="firstLineDel">
           
-          <br />
-          <button class="button is-primary">Complete Order</button>
+
+          <input class="standardInput-secondLineAdd" placeholder="2nd Line of Address" name="secondLineDel">
+         
+
+          <input class="standardInput-postcode" placeholder="Postcode" name="postcode">
+         
+
+       
+         <input class="standardInput-telNumber" placeholder="Tel No." name="telNumber">
+        
+          
+          <button type="submit" class="button is-primary">Confirm & Pay</button>
         </form>
-      </div>
+        
+      
     </div>
   `,
   });

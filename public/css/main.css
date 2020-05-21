@@ -75,6 +75,22 @@ line-height: 1.34; }
     
         }
 
+        #postcodeFailureMsg {
+          position: absolute;
+          top: 70%;
+          left: 50%;
+          text-align: center;
+          transform: translate(-50%, -50%);
+          backface-visibility: hidden;
+          display: none;
+          color: #fff;
+          margin-top: 6rem;
+          padding: 1rem;
+          text-transform: uppercase;
+          font-size: 1rem;
+
+    
+        }
           #postcodeInput {
             position: absolute;
             top: 50%;
@@ -106,6 +122,29 @@ line-height: 1.34; }
             border-radius: 10px;
             text-align: center;
                    }
+
+                   .standardInput-email,
+                   .standardInput-firstLineAdd,
+                   .standardInput-secondLineAdd,
+                   .standardInput-postcode,
+                   .standardInput-telNumber,
+                   .standardInput-firstName,
+                   .standardInput-surname
+
+                   {
+                    border: 1px solid rgba(126, 213, 111, 0.8);
+                    padding: 0.5rem;
+                    margin: 1rem;
+                    color:  black;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    border-radius: 10px;
+                    text-align: center;
+                    width: 90vw;
+                           }
+
+                        
+
 
 
           .inputBoxPostcode:active,
@@ -190,6 +229,20 @@ box-shadow: 2px -1px 6px -1px rgba(0,0,0,0.42);
   
 }
 
+.cartReview {
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8));
+  color: white;
+  -webkit-box-shadow: 2px -1px 6px -1px rgba(0,0,0,0.42);
+-moz-box-shadow: 2px -1px 6px -1px rgba(0,0,0,0.42);
+box-shadow: 2px -1px 6px -1px rgba(0,0,0,0.42);
+  padding: 2rem;
+  animation: showText 1s ease-out;
+  border-radius: 10px;
+  width: 90vw;
+  margin: 2rem;
+  
+}
+
 .cartHeading {
   font-size: 1.9rem;
 }
@@ -248,6 +301,15 @@ button:hover {
   margin-left: 1rem;
 }
 
+.checkoutBtn {
+  margin: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.5rem;
+  text-transform: uppercase;
+
+}
+
 .cartPrice {
   font-weight: bold;
 }
@@ -259,6 +321,40 @@ button:hover {
 .row {
   margin-bottom: 25rem;
 }
+
+.deliveryForm {
+  width: 90vw;
+  margin: 1rem;
+}
+
+.orderConfirmation {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.orderConfirmationH1 {
+  margin-bottom: 1rem;
+}
+
+.orderConfDeliverySection {
+  margin-top: 1rem;
+}
+
+.orderConfPostcode {
+  margin-bottom: 3rem;
+}
+
+.orderConfItemsHeading {
+  margin: 1rem 0rem;
+}
+
+.orderConfItems,
+.orderConfItemPrice,
+.orderConfSubTotal,
+.orderConfGrandTotal {
+  margin: 1rem 0rem;
+}
+
 
 @media (max-width: 900px) {
   .header-banner__text-box { 
@@ -277,7 +373,9 @@ font-size: 1.5rem;
   }
 }
 
-@media (max-width: 500px) {
+
+
+@media (max-width: 600px) {
 
   .header-banner__text-box { 
   font-size: 3rem;

@@ -1,4 +1,4 @@
-const layout = require("../layout");
+const layout = require("../checkoutLayout");
 const { getError } = require("../helpers");
 
 module.exports = ({ completedOrder, categories }) => {
@@ -10,9 +10,8 @@ module.exports = ({ completedOrder, categories }) => {
       }).join('\n')
       const items = completedOrder.cart.items.map(itemsOnOrder => {
         return `
-        <img src="data:image/png;base64, ${itemsOnOrder.image}" width="40" height="20"/>
-       <p> ${itemsOnOrder.title} x ${itemsOnOrder.quantity} </p>
-       <p><b>Total: </b> £${parseFloat(itemsOnOrder.quantity * itemsOnOrder.price / 100 * 100).toFixed(2)}</p>
+       <p class="orderConfItems"> ${itemsOnOrder.title} x ${itemsOnOrder.quantity} </p>
+       <p class="orderConfItemPrice"><b>Total: </b> £${parseFloat(itemsOnOrder.quantity * itemsOnOrder.price / 100 * 100).toFixed(2)}</p>
        
        `
 
@@ -21,24 +20,26 @@ module.exports = ({ completedOrder, categories }) => {
       links: `${cats}`,
     content: `
     <div class="container">
-        <h1 class="subtitle">Order Confirmation</h1>
+      <div class="orderConfirmation">
+        <h1 class="orderConfirmationH1">Order Confirmation</h1>
         <h3>Your Order Number is: #${completedOrder.orderNo}</h3>
-        <h5>Delivery Details:</h5>
+        <h5 class="orderConfDeliverySection">Delivery Details:</h5>
         <div>${completedOrder.firstName} ${completedOrder.surname} </div>
         <div>${completedOrder.firstLineDel} </div>
         <div>${completedOrder.secondLineDel} </div>
-        <div>${completedOrder.postcode}</div>
-</div>
+        <div class="orderConfPostcode">${completedOrder.postcode}</div>
     <div class="container">
-    <p><b>Items</b> </p>
+    <p class="orderConfItemsHeading><b>Items</b> </p>
     ${items}
 
     <hr>
-    <p><b>Sub Total:</b> £${parseFloat(completedOrder.orderTotal).toFixed(2)}</p>
+    <p class="orderConfSubTotal"><b>Sub Total:</b> £${parseFloat(completedOrder.orderTotal).toFixed(2)}</p>
     <p><b>Discount: </b> £${parseFloat(completedOrder.discountValue).toFixed(2)}</p>
-    <p><b>Grand Total: </b> £${parseFloat(completedOrder.grandTotal).toFixed(2)}</p>
+    <p class="orderConfGrandTotal"><b>Grand Total: </b> £${parseFloat(completedOrder.grandTotal).toFixed(2)}</p>
     </div>
-    
+    </div>
+    </div>
+
   `,
   });
 };

@@ -18,7 +18,8 @@ try {
 
 async function getCart(cartId) {
     let itemhtml = ``
-    let orderTotal = 0
+    let orderTotal = 0;
+    let itemTotal = 0;
 cartElement = document.getElementsByClassName('cartDetail')
 try {
     const response = await axios.get(`/${cartId}`)
@@ -26,12 +27,15 @@ try {
         itemhtml = `<p class="emptyBasket">Please select the dishes you wish to order</p>`
     } 
     for (items of response.data.cart.items) {
-        itemhtml += `  <p class="cartItem">${items.title} <span class="cartMultiplier"> X <span class="cartQty">${items.quantity}</span> </span>  <span class="cartPrice"> £${items.price} </span> <button onclick=deleteCartItem("${items.id}","${cartId}") class="deleteCartItem">X </button> </p>`
+        itemTotal = items.quantity * items.price
+        itemTotal = (Math.round(itemTotal * 100) / 100).toFixed(2)
+
+        itemhtml += `  <p class="cartItem">${items.title} <span class="cartMultiplier"> X <span class="cartQty">${items.quantity}</span> </span>  <span class="cartPrice"> £${itemTotal} </span> <button onclick=deleteCartItem("${items.id}","${cartId}") class="deleteCartItem">X </button> </p>`
         orderTotal += items.quantity * items.price
     }
     orderTotal = (Math.round(orderTotal * 100) / 100).toFixed(2)
 
-    itemhtml += `<p class="Total">Order Total: <span class="cartOrderTotal"></span>£${orderTotal}</p>`
+    itemhtml += `<p class="Total">Order Total: <span class="cartOrderTotal"></span>£${orderTotal} </p><form method="GET" action="/cart/review"><button type="submit" class="checkoutBtn">Checkout</button></form>`
     cartElement[0].innerHTML = itemhtml
     console.log(itemhtml)
 }
@@ -59,12 +63,20 @@ const inputbox = document.getElementById("inputBoxPostcode")
 
 
 inputbox.addEventListener("keyup", function(e){ 
-if (inputbox.value.length >= 2) {
+    document.getElementById("postcodeFailureMsg").style.display="none";
+
+    const postcodes = ['DD1','DD2', 'DD3', 'DD4', 'DD5', 'DD6']
+
+if (postcodes.includes(inputbox.value.toUpperCase())) {
     document.getElementById("postcodeInput").style.display="none";
     document.getElementById("postcodeSuccessMsg").style.display="block";
 document.getElementById('sectionMenu').style.display="block";
 document.getElementById("postcodeSuccessMsg").innerText="GREAT! WE CAN DELIVER TO YOUR AREA";
 
+
+} else if (inputbox.value.length > 4) {
+    document.getElementById("postcodeFailureMsg").style.display="block";
+    document.getElementById("postcodeFailureMsg").innerText="UNFORTUNATELY, WE DO NOT DELIVER TO YOUR AREA";
 
 }
 })

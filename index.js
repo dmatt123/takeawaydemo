@@ -32,7 +32,10 @@ app.use(authRouter, adminProductsRouter, productsRouter, cartsRouter, categoryRo
 
 const http = require('http');
 
-const port = 8000;
+// const port = 8000;
+
+// port = 33248;
+// ip = `127.0.0.1`
 
 const server = http.createServer(app);
 
@@ -40,6 +43,6 @@ const server = http.createServer(app);
 //     console.log('App is listening on port 8000!')
 //   });
 
-  server.listen(process.env.PORT, process.env.IP, () => {
+  server.listen(port, ip, () => {
     console.log('App has started')
   });

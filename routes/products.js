@@ -12,7 +12,7 @@ const searchListings = require("../views/products/searchlistings");
 
 const router = express.Router();
 
-router.get('/', async (req,res) => {
+router.get('/takeawaydemo', async (req,res) => {
 let cart
     if (!req.session.cartId) {
         //create a cart
@@ -20,17 +20,6 @@ let cart
         req.session.cartId = cart.id;
     } 
 
-if (req.query.search) { 
-    let query = req.query.search
-    const products = await productsRepo.getAll();
-    const categories = await categoryRepo.getAll();
-
-    query = query.toUpperCase()
-
-    const results = products.filter((product) => product.title.toUpperCase().includes(query) || product.description.toUpperCase().includes(query))
-
-res.send(searchListings({products: results,categories, query})) 
-}
     const products = await productsRepo.getAll()
     const category = await categoryRepo.getAll()
     const cartId = req.session.cartId 
