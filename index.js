@@ -48,10 +48,10 @@ ip = `127.0.0.1`
 
 const server = http.createServer(app);
 
-server.listen(8000, () => {
-    console.log('App is listening on port 8000!')
-  });
+// server.listen(8000, () => {
+//     console.log('App is listening on port 8000!')
+//   });
 
-  // server.listen(port, ip, () => {
-  //   console.log('App has started')
-  // });
+  server.listen(port, ip, () => {
+    console.log('App has started')
+  });
