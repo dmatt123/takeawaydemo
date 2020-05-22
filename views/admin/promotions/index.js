@@ -49,27 +49,25 @@ module.exports = ({ promotions }) => {
 
       <h1 class="subtitle">Add a New Promo</h1>
 
-      <form method="POST">
+      <form method="POST" action="/admin/promos/new/create">
       <div class="field">
         <label class="label">Code</label>
         <input class="input" placeholder="Enter Discount Code" name="code">
       </div>
       
       <div class="field">
-        <label class="label">Type</label>
-        <input class="input" placeholder="% or £" name="type">
-      </div>
+      <label class="label">Discount Type: </label>
+      <select id="spice" name="type">
+        <option value="%">% - Percentage off</option>
+        <option value="£">£ - Value off</option>
+      </select>
+
 
       <div class="field">
       <label class="label">Discount Value</label>
       <input class="input" placeholder="Discount" name="discount">
     </div>
 
-    <div class="field">
-    <label class="label">Single Use</label>
-    <input type="checkbox" name="singleUse" checked="false">
-  </div>    
-    
       <br />
       <button class="button is-primary">Create Promotion</button>
     </form>

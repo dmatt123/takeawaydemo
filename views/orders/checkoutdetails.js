@@ -2,28 +2,20 @@ const layout = require("../checkoutLayout");
 const { getError } = require("../helpers");
 
 module.exports = ({ errors, cart}) => {
-let orderTotal = 0
-let itemTotal = 0
-let currentCart = ''
 
-for (items of cart.items) {
-itemTotal = items.quantity * items.price
-itemTotal = (Math.round(itemTotal * 100) / 100).toFixed(2)
-
-currentCart += `  <p class="cartItem">${items.title} <span class="cartMultiplier"> X <span class="cartQty">${items.quantity}</span> </span>  <span class="cartPrice"> £${itemTotal} </span> <button onclick=deleteCartItem("${items.id}","${cart.id}") class="deleteCartItem">X </button> </p>`
-orderTotal += items.quantity * items.price
-}
-orderTotal = (Math.round(orderTotal * 100) / 100).toFixed(2)
 
   return layout({
     content: `
-  
-    <div class="cartReview">  <h4 class="cartHeading">Your Order</h4>
-    ${currentCart}
-    
-    Order Total: £${orderTotal}</div>
+    <div class="cartDetailHeading">Your Order</div>
 
-    
+    <div class="cartDetail"> 
+    </div>
+
+    <div class="field">
+    <input id="discountCodeInput" placeholder="Enter Discount Code" name="code">
+   <br> <button onclick=addPromo("${cart.id}") class="button is-primary">Apply Code</button>     <div id="lds-hourglass"></div>
+
+<div class="container">
     <div class="deliveryForm">
 
         <form method="POST" action="/cart/review/confirm">
@@ -51,7 +43,10 @@ orderTotal = (Math.round(orderTotal * 100) / 100).toFixed(2)
         </form>
         
       
-    </div>
+    </div> </div>
+
+    <body onload=getCart("${cart.id}")
+
   `,
   });
 };

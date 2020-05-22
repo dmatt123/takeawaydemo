@@ -5,12 +5,13 @@
     "RRP": "",
     "metatitle": "",
     "metadescription": "",
-    "description": "",
+    "description": "In chilli sauce",
     "productUrl": "Deep_Fried_Shredded_Crispy_Chicken",
     "categories": [
       "e96fdfb4"
     ],
-    "id": "5f39d3c5"
+    "id": "5f39d3c5",
+    "spice": "none"
   },
   {
     "title": "Curried Chicken",
@@ -44,12 +45,13 @@
     "RRP": "",
     "metatitle": "",
     "metadescription": "",
-    "description": "",
+    "description": "With sweet & sour sauce",
     "productUrl": "Chicken_Balls_in_Batter",
     "categories": [
       "e96fdfb4"
     ],
-    "id": "2375517a"
+    "id": "2375517a",
+    "spice": "none"
   },
   {
     "title": "Chicken Fried Rice",
@@ -70,12 +72,13 @@
     "RRP": "",
     "metatitle": "",
     "metadescription": "",
-    "description": "",
+    "description": "Barbecued spare ribs, prawn on toast, crispy spring rolls & deep fried Wonton served with sweet & sour sauce",
     "productUrl": "Chopstix_Special_Platter",
     "categories": [
       "3bc6ecb6"
     ],
-    "id": "693e481f"
+    "id": "693e481f",
+    "spice": "none"
   },
   {
     "title": "Barbecued Spare Ribs",
@@ -83,12 +86,13 @@
     "RRP": "",
     "metatitle": "",
     "metadescription": "",
-    "description": "",
+    "description": "Strips of marinated spare ribs roasted to perfection",
     "productUrl": "Barbecued_Spare_Ribs",
     "categories": [
       "3bc6ecb6"
     ],
-    "id": "0c5c1432"
+    "id": "0c5c1432",
+    "spice": "none"
   },
   {
     "title": "Peking Spare Ribs",
@@ -96,12 +100,13 @@
     "RRP": "",
     "metatitle": "",
     "metadescription": "",
-    "description": "",
+    "description": "With spicy sweet & sour sauce",
     "productUrl": "Peking_Spare_Ribs",
     "categories": [
       "3bc6ecb6"
     ],
-    "id": "64558c7b"
+    "id": "64558c7b",
+    "spice": "none"
   },
   {
     "title": "Salt & Pepper Spare Ribs",
@@ -109,12 +114,13 @@
     "RRP": "",
     "metatitle": "",
     "metadescription": "",
-    "description": "",
+    "description": "Stir fried with spicy salt & fresh chopped green chillies",
     "productUrl": "Salt_&_Pepper_Spare_Ribs",
     "categories": [
       "3bc6ecb6"
     ],
-    "id": "2deb4388"
+    "id": "2deb4388",
+    "spice": "none"
   },
   {
     "title": "Deep Fried Wonton",
@@ -166,7 +172,8 @@
     "categories": [
       "39d328b2"
     ],
-    "id": "4a014229"
+    "id": "4a014229",
+    "spice": "spice1"
   },
   {
     "title": "Chicken & Sweetcorn Soup",
@@ -213,12 +220,13 @@
     "RRP": "",
     "metatitle": "",
     "metadescription": "",
-    "description": "",
+    "description": "Stir fried with fresh chopped hot chillies, garlic & onion completed with spicy bean sauce",
     "productUrl": "Szechuan_Prawns",
     "categories": [
       "956455c2"
     ],
-    "id": "cea1d195"
+    "id": "cea1d195",
+    "spice": "spice1"
   },
   {
     "title": "Sweet & Sour Prawns",
@@ -226,12 +234,13 @@
     "RRP": "",
     "metatitle": "",
     "metadescription": "",
-    "description": "",
+    "description": "Peking style",
     "productUrl": "Sweet_&_Sour_Prawns",
     "categories": [
       "956455c2"
     ],
-    "id": "c7b58f05"
+    "id": "c7b58f05",
+    "spice": "none"
   },
   {
     "title": "Kung Po Prawns",
@@ -239,12 +248,13 @@
     "RRP": "",
     "metatitle": "",
     "metadescription": "",
-    "description": "",
+    "description": "Lightly battered deep fried, blended with spicy sweet & sour sauce, garlic, fresh chopped chillies, water chestnuts & spring onion",
     "productUrl": "Kung_Po_Prawns",
     "categories": [
       "956455c2"
     ],
-    "id": "869a6c92"
+    "id": "869a6c92",
+    "spice": "spice1"
   },
   {
     "title": "Fried Prawn with Broccoli",
@@ -271,5 +281,25 @@
       "956455c2"
     ],
     "id": "e66ef9de"
+  },
+  {
+    "title": "Egg Fried Rice",
+    "price": "2.29",
+    "description": "Standard Egg Fried Rice",
+    "spice": "none",
+    "categories": [
+      "e96fdfb4"
+    ],
+    "id": "17ab6fe2"
+  },
+  {
+    "title": "Salt & Pepper Chips",
+    "price": "2.50",
+    "description": "Try our NEW Salt & Pepper Chips! ONLY £2.50!",
+    "spice": "spice2",
+    "categories": [
+      "e96fdfb4"
+    ],
+    "id": "d113cfce"
   }
 ]

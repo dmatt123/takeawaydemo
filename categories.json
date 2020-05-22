@@ -3,12 +3,12 @@
     "name": "Popular",
     "metatitle": "",
     "metadescription": "",
-    "description": "",
+    "description": "Check out our most popular dishes! ",
     "categoryUrl": "Popular",
     "products": [
       {
         "id": "5f39d3c5",
-        "position": 0
+        "position": "2"
       },
       {
         "id": "343fe303",
@@ -25,6 +25,14 @@
       {
         "id": "5145c353",
         "position": 0
+      },
+      {
+        "id": "17ab6fe2",
+        "position": 0
+      },
+      {
+        "id": "d113cfce",
+        "position": "1"
       }
     ],
     "id": "e96fdfb4"

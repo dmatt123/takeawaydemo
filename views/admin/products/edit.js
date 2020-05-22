@@ -16,14 +16,6 @@ module.exports = ({ product, errors }) => {
               }" class="input" placeholder="Title" name="title">
               <p class="help is-danger">${getError(errors, "title")}</p>
             </div>
-
-            <div class="field">
-            <label class="label">RRP</label>
-            <input value="${
-              product.RRP
-            }" class="input" placeholder="RRP" name="RRP">
-            <p class="help is-danger">${getError(errors, "price")}</p>
-          </div>
             
             <div class="field">
               <label class="label">Price</label>
@@ -40,42 +32,17 @@ module.exports = ({ product, errors }) => {
             }" class="input" placeholder="Description" name="description">
           </div>
 
-          <div class="field">
-          <label class="label">Meta Title</label>
-          <input value="${
-            product.metatitle
-          }" class="input" placeholder="Meta Title" name="metatitle">
-        </div>
-          
-        <div class="field">
-        <label class="label">Meta Description</label>
-        <input value="${
-          product.metadescription
-        }" class="input" placeholder="Meta Description" name="metadescription">
-      </div>
-
-      <div class="field">
-      <label class="label">Colour</label>
-      <input value="${
-        product.colour
-      }" class="input" placeholder="Colour" name="colour">
-    </div>
-      
-        
-      <div class="field">
-      <label class="label">Product Url</label>
-      <input value="${
-        product.productUrl
-      }" class="input" placeholder="Product URL" name="productUrl">
-    </div>
+    <div class="field">
+    <label class="label">Spice indicator:</label>
+    <select id="spice" name="spice" value="1">
+      <option value="none">N/A</option>
+      <option value="spice1">1</option>
+      <option value="spice2">2</option>
+      <option value="spice3">3</option>
+    </select>
       
 
 
-            <div class="field">
-              <label class="label">Image</label>            
-              <input type="file" name="image" />
-            </div>
-            <br />
             <button class="button is-primary">Edit</button>
           </form>
         </div>

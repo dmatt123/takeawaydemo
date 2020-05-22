@@ -7,7 +7,6 @@ const ordersRepo = require("../repositories/orders");
 const promosRepo = require("../repositories/promotions")
 
 
-const cartShowTemplate = require("../views/carts/show");
 const orderCompleteTemplate = require("../views/orders/checkoutdetails");
 const orderConfirmationTemplate = require("../views/orders/orderconfirmation")
 const productListings = require("../views/products/index");
@@ -74,13 +73,39 @@ router.post("/cart/:id/promo/remove", async (req,res) => {
 
 })
 
+router.post("/:cartId/promos/:discount", async(req,res) => {
+
+  let promo
+  let cart
+ const code = req.params.discount.toUpperCase()
+ const cartId = req.params.cartId
+ 
+ promo = await promosRepo.getOneBy({code: code})
+cart = await cartsRepo.getOne(cartId);
+ 
+
+ 
+ if (promo) {
+  cart.discount = promo
+}
+
+ await cartsRepo.update(cart.id, cart)
+
+ console.log(cart)
+
+
+ 
+
+})
+
 // for discount codes
-router.post("/cart", async (req,res) => {
+router.post("/cart/promos/discount", async (req,res) => {
   if (!req.session.cartId) {
     res.redirect("/");
   }
 
   let code = req.body.code.toUpperCase();
+  console.log(code)
 
   const promo = await promosRepo.getOneBy({code: code})
   const categories = await categoryRepo.getAll();
@@ -96,7 +121,8 @@ await cartsRepo.update(cart.id, cart)
     item.product = product;
   }
 
-  res.send(cartShowTemplate({items: cart.items, categories, cart}))
+  res.send(orderCompleteTemplate({cart}));
+
 
 
 })

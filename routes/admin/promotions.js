@@ -18,7 +18,8 @@ const promotions = await promosRepo.getAll();
 res.send(promoTemplate({promotions}))
 })
 
-router.post("/admin/promos", isLoggedIn, async (req,res) => {
+router.post("/admin/promos/new/create", isLoggedIn, async (req,res) => {
+    console.log("route")
     const {code, type, discount} = req.body;
 
     const newpromotion = await promosRepo.create({code: code.toUpperCase(), type, discount, creationDate: orderDate = moment().format('MMMM Do YYYY, h:mm:ss a')});
@@ -27,7 +28,7 @@ router.post("/admin/promos", isLoggedIn, async (req,res) => {
 
 router.post("/admin/promos/:id/delete", isLoggedIn, async (req,res) => {
 const promo = await promosRepo.delete(req.params.id)
-res.redirect("/admin/promos")
+res.redirect("/admin/promos/new")
 });
 
 module.exports = router;

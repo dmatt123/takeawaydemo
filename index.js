@@ -28,21 +28,30 @@ app.use(
   })
 );
 
-app.use(authRouter, adminProductsRouter, productsRouter, cartsRouter, categoryRouter, ordersRouter, promosRouter);
+// app.use(authRouter, adminProductsRouter, productsRouter, cartsRouter, categoryRouter, ordersRouter, promosRouter);
+
+app.use('/', authRouter);
+app.use('/admin', adminProductsRouter);
+app.use('/', productsRouter);
+app.use('/', cartsRouter);
+app.use('/admin', categoryRouter);
+app.use('/admin', ordersRouter);
+app.use('/', promosRouter);
+
 
 const http = require('http');
 
 // const port = 8000;
 
-// port = 33248;
-// ip = `127.0.0.1`
+port = 33248;
+ip = `127.0.0.1`
 
 const server = http.createServer(app);
 
-// server.listen(8000, () => {
-//     console.log('App is listening on port 8000!')
-//   });
-
-  server.listen(port, ip, () => {
-    console.log('App has started')
+server.listen(8000, () => {
+    console.log('App is listening on port 8000!')
   });
+
+  // server.listen(port, ip, () => {
+  //   console.log('App has started')
+  // });

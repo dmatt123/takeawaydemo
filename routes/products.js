@@ -4,21 +4,33 @@ const categoryRepo = require("../repositories/category");
 const cartsRepo = require("../repositories/carts");
 
 const productListings = require("../views/products/index");
-const productDisplayPage = require("../views/products/display.js");
-const categoryListings = require("../views/products/categorylistings");
 
-const searchListings = require("../views/products/searchlistings");
 
 
 const router = express.Router();
 
+
 router.get('/takeawaydemo', async (req,res) => {
+
 let cart
+
+try {
+cart = await cartsRepo.getOne(req.session.cartId) 
+} catch {
+req.session.cartId = null
+}
+
+if (cart === undefined) {
+    console.log("undefined cart")
+    req.session.cartId = null;
+}
     if (!req.session.cartId) {
         //create a cart
         cart = await cartsRepo.create({ items: [], discount: [] });
         req.session.cartId = cart.id;
-    } 
+    }
+
+
 
     const products = await productsRepo.getAll()
     const category = await categoryRepo.getAll()

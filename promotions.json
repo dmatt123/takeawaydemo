@@ -1,9 +1,30 @@
 [
   {
-    "code": "WINE10",
+    "code": "20OFF",
     "type": "%",
-    "discount": "10",
-    "creationDate": "April 21st 2020, 10:03:56 am",
-    "id": "1d435198"
+    "discount": "20",
+    "creationDate": "May 22nd 2020, 9:22:16 am",
+    "id": "203f45a3"
+  },
+  {
+    "code": "10OFF",
+    "type": "£",
+    "discount": "10.00",
+    "creationDate": "May 22nd 2020, 9:25:33 am",
+    "id": "c4c44eba"
+  },
+  {
+    "code": "20OFFB",
+    "type": "%",
+    "discount": "20",
+    "creationDate": "May 22nd 2020, 9:31:45 am",
+    "id": "7a8dfe5a"
+  },
+  {
+    "code": "50OFF",
+    "type": "%",
+    "discount": "50",
+    "creationDate": "May 22nd 2020, 10:09:12 am",
+    "id": "5b1ad28e"
   }
 ]

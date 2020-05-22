@@ -12,7 +12,7 @@ const { handleErrors, isLoggedIn } = require("./middlewares");
 const router = express.Router();
 
 // get all products
-router.get("/admin/orders", isLoggedIn, async (req, res) => {
+router.get("/orders", isLoggedIn, async (req, res) => {
   const orders = await ordersRepo.getAll();
 
   //  products.forEach(element => {
@@ -21,7 +21,7 @@ router.get("/admin/orders", isLoggedIn, async (req, res) => {
   res.send(orderIndexTemplate({ orders }));
 });
 
-router.get("/admin/orders/:id", isLoggedIn, async (req,res) => {
+router.get("/orders/:id", isLoggedIn, async (req,res) => {
   const order = await ordersRepo.getOneBy({orderNo: parseInt(req.params.id)})
 
   console.log(order)

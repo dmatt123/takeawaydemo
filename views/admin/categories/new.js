@@ -18,17 +18,6 @@ module.exports = ({ errors }) => {
            <label class="label">Description</label>
            <input class="input" placeholder="Description" name="description">
           </div>
-
-          <div class="field">
-          <label class="label">Meta Title</label>
-          <input class="input" placeholder="Meta Title" name="metatitle">
-         </div>
-
-         <div class="field">
-         <label class="label">Meta Description</label>
-         <input class="input" placeholder="Meta Description" name="metadescription">
-        </div>
-          
           <br />
           <button class="button is-primary">Create</button>
         </form>

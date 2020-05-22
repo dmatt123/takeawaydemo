@@ -7,23 +7,42 @@ module.exports = ({ products,category, cartId }) => {
   let currentItem
 
   for (cat of category) {
-    data+= `<h2 class="categoryTitle">${cat.name}</h2>`
+    data+= `<h2 class="categoryTitle">${cat.name}</h2>
+            <h4 class="categoryDesc">${cat.description}</h4>`
   for (prod of cat.products) {
     currentItem = products.find(
       (item) => item.id == prod.id
       
     );
 
+    let spice = ``;
+
+    if (currentItem.spice == "spice1") {
+      spice = `<i class="fas fa-pepper-hot"></i>` }
+    else if (currentItem.spice == "spice2") {
+      spice = `<i class="fas fa-pepper-hot"></i><i class="fas fa-pepper-hot"></i>`
+    } else if (currentItem.spice == "spice3") {
+      spice = `<i class="fas fa-pepper-hot"></i><i class="fas fa-pepper-hot"></i><i class="fas fa-pepper-hot"></i>`
+    } else {
+    spice = ``
+  }
+
     data+= `    
       <div class="product">
-    <h4 class="productName">${currentItem.title}</h4> 
+    <h4 class="productName">${currentItem.title} ${spice}
+
+
+
+    </h4> 
     <div class="orderDetail">          
      <p class="priceElement">£${currentItem.price}</p>
 
     <button onclick=addtoCart("${cartId}","${currentItem.id}") class="btnAddtoCart">
             +
             </button>
-            </div> </div>
+
+            </div>             <p class="productDesc"> ${currentItem.description}</p>
+            </div>
             `
   } 
   }

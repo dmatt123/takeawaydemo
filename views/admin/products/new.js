@@ -21,30 +21,22 @@ module.exports = ({ errors }) => {
             <p class="help is-danger">${getError(errors, "price")}</p>
           </div>
 
-          <div class="field">
-          <label class="label">RRP</label>
-          <input class="input" placeholder="RRP" name="RRP">
-        </div>
 
           <div class="field">
-           <label class="label">Description</label>
-           <input class="input" placeholder="Description" name="description">
-          </div>
-
-          <div class="field">
-          <label class="label">Meta Title</label>
-          <input class="input" placeholder="Meta Title" name="metatitle">
+          <label class="label">Description</label>
+          <input class="input" placeholder="Description" name="description">
          </div>
 
          <div class="field">
-         <label class="label">Meta Description</label>
-         <input class="input" placeholder="Meta Description" name="metadescription">
-        </div>
-          
-          <div class="field">
-            <label class="label">Image</label>            
-            <input type="file" name="image" />
-          </div>
+         <label class="label">Spice indicator:</label>
+         <select id="spice" name="spice">
+           <option value="none">N/A</option>
+           <option value="spice1">1</option>
+           <option value="spice2">2</option>
+           <option value="spice3">3</option>
+         </select>
+
+
           <br />
           <button class="button is-primary">Create</button>
         </form>

@@ -22,29 +22,6 @@ module.exports = ({ category, errors }) => {
               category.description
             }" class="input" placeholder="description" name="description">
           </div>
-            
-
-          <div class="field">
-          <label class="label">Meta Title</label>
-          <input value="${
-            category.metatitle
-          }" class="input" placeholder="Meta Title" name="metatitle">
-        </div>
-          
-        <div class="field">
-        <label class="label">Meta Description</label>
-        <input value="${
-          category.metadescription
-        }" class="input" placeholder="Meta Description" name="metadescription">
-      </div>
-        
-      <div class="field">
-      <label class="label">Category Url</label>
-      <input value="${
-        category.categoryUrl
-      }" class="input" placeholder="Product URL" name="categoryUrl">
-    </div>
-      
 
 
 
