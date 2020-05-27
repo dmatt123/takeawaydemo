@@ -88,6 +88,18 @@
           }
         ],
         "quantity": 1
+      },
+      {
+        "id": "a7191c0e",
+        "title": "Steamed Tiger Prawns",
+        "price": 4.5,
+        "quantity": 1
+      },
+      {
+        "id": "a64af1b9",
+        "title": "Stir Fried Salt & Pepper Chicken",
+        "price": 4.5,
+        "quantity": 1
       }
     ],
     "discount": [],
