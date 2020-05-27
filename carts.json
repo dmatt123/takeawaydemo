@@ -100,6 +100,70 @@
         "title": "Stir Fried Salt & Pepper Chicken",
         "price": 4.5,
         "quantity": 1
+      },
+      {
+        "id": "f3132775-253d8f1d",
+        "title": "Fanta",
+        "price": 2,
+        "extras": [
+          {
+            "name": "1L",
+            "price": 1,
+            "id": "253d8f1d"
+          }
+        ],
+        "quantity": 1
+      },
+      {
+        "id": "dc531293-8d54c6b0",
+        "title": "Chicken Balls in Batter",
+        "price": 6.1,
+        "extras": [
+          {
+            "name": "Chips",
+            "price": 0,
+            "id": "8d54c6b0"
+          }
+        ],
+        "quantity": 1
+      },
+      {
+        "id": "c4db35de",
+        "title": "Prawn Toast",
+        "price": 4.5,
+        "quantity": 1
+      },
+      {
+        "id": "432bdd8e",
+        "title": "Barbecued Spare Ribs",
+        "price": 5.5,
+        "quantity": 1
+      },
+      {
+        "id": "dc531293-8d54c6b0",
+        "title": "Chicken Balls in Batter",
+        "price": 6.1,
+        "extras": [
+          {
+            "name": "Chips",
+            "price": 0,
+            "id": "8d54c6b0"
+          }
+        ],
+        "quantity": 1
+      },
+      {
+        "id": "11aba540-2ff19f88",
+        "title": "Chicken Fried Rice",
+        "price": 6.2,
+        "extras": [
+          {
+            "name": "Egg Fried Rice",
+            "price": 0.2,
+            "id": "2ff19f88"
+          }
+        ],
+        "quantity": 1
       }
     ],
     "discount": [],

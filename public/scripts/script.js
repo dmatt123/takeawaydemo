@@ -203,9 +203,17 @@ if (inputbox.value.length > 5 && inputbox.value.toUpperCase().includes(postcode)
 document.getElementById('sectionMenu').style.display="block";
 document.getElementById("postcodeSuccessMsg").innerText="GREAT! WE CAN DELIVER TO YOUR AREA";
 
+
+if (document.body.clientWidth < 600) {
+    console.log("screen is less than 600px wide")
+    document.getElementById('cartMobile').style.display="block";
+}
+
+
 if (date.getHours() < 16) {
     document.getElementById("postcodeSuccessMsg").innerText="The restaurant is currently closed but we are accepting pre-orders for this evening"
   }
+
 
 
 } else if (inputbox.value.length > 6) {
