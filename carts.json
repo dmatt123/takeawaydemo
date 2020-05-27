@@ -77,90 +77,40 @@
   {
     "items": [
       {
-        "id": "9d0df585-701eab09",
-        "title": "Spicy Mongolian",
-        "price": 4.5,
-        "extras": [
-          {
-            "name": "Lamb",
-            "price": 0,
-            "id": "701eab09"
-          }
-        ],
-        "quantity": 1
-      },
-      {
-        "id": "a7191c0e",
-        "title": "Steamed Tiger Prawns",
-        "price": 4.5,
-        "quantity": 1
-      },
-      {
-        "id": "a64af1b9",
-        "title": "Stir Fried Salt & Pepper Chicken",
-        "price": 4.5,
-        "quantity": 1
-      },
-      {
-        "id": "f3132775-253d8f1d",
-        "title": "Fanta",
-        "price": 2,
-        "extras": [
-          {
-            "name": "1L",
-            "price": 1,
-            "id": "253d8f1d"
-          }
-        ],
-        "quantity": 1
-      },
-      {
-        "id": "dc531293-8d54c6b0",
-        "title": "Chicken Balls in Batter",
-        "price": 6.1,
-        "extras": [
-          {
-            "name": "Chips",
-            "price": 0,
-            "id": "8d54c6b0"
-          }
-        ],
-        "quantity": 1
-      },
-      {
-        "id": "c4db35de",
-        "title": "Prawn Toast",
-        "price": 4.5,
-        "quantity": 1
-      },
-      {
-        "id": "432bdd8e",
-        "title": "Barbecued Spare Ribs",
-        "price": 5.5,
-        "quantity": 1
-      },
-      {
-        "id": "dc531293-8d54c6b0",
-        "title": "Chicken Balls in Batter",
-        "price": 6.1,
-        "extras": [
-          {
-            "name": "Chips",
-            "price": 0,
-            "id": "8d54c6b0"
-          }
-        ],
-        "quantity": 1
-      },
-      {
-        "id": "11aba540-2ff19f88",
+        "id": "11aba540-b06d5660",
         "title": "Chicken Fried Rice",
-        "price": 6.2,
+        "price": 6,
         "extras": [
           {
-            "name": "Egg Fried Rice",
-            "price": 0.2,
-            "id": "2ff19f88"
+            "name": "Boiled Rice",
+            "price": 0,
+            "id": "b06d5660"
+          }
+        ],
+        "quantity": 1
+      },
+      {
+        "id": "dc531293-8d54c6b0",
+        "title": "Chicken Balls in Batter",
+        "price": 6.1,
+        "extras": [
+          {
+            "name": "Chips",
+            "price": 0,
+            "id": "8d54c6b0"
+          }
+        ],
+        "quantity": 1
+      },
+      {
+        "id": "7f68d36d-8d54c6b0",
+        "title": "Curried Chicken",
+        "price": 6.1,
+        "extras": [
+          {
+            "name": "Chips",
+            "price": 0,
+            "id": "8d54c6b0"
           }
         ],
         "quantity": 1

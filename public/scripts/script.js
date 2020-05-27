@@ -42,6 +42,11 @@ async function addExtras(cartId, prodId, extrasId) {
 
     try {
         const response = await axios.post(`${cartId}/${prodId}/${extrasId}/add`)
+        const notification = document.getElementById('userNotification');
+        notification.style.display = 'block';
+        notification.innerText = "Item successfully added to your order"
+        setTimeout(function(){     notification.style.display = 'none';
+    }, 8000);
     } catch(err) {
         console.log(err)
     }
