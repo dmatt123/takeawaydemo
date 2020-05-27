@@ -1,4 +1,4 @@
-const layout = require("../checkoutLayout");
+const layout = require("../orderConfLayout");
 const { getError } = require("../helpers");
 
 module.exports = ({ completedOrder, categories }) => {
@@ -9,8 +9,14 @@ module.exports = ({ completedOrder, categories }) => {
      
       }).join('\n')
       const items = completedOrder.cart.items.map(itemsOnOrder => {
+        let extras;
+    if (!itemsOnOrder.extras) {
+      extras = ``
+    } else {
+      extras = `with ${itemsOnOrder.extras[0].name}`
+    }
         return `
-       <p class="orderConfItems"> ${itemsOnOrder.title} x ${itemsOnOrder.quantity} </p>
+       <p class="orderConfItems"> ${itemsOnOrder.title} ${extras} x ${itemsOnOrder.quantity} </p>
        <p class="orderConfItemPrice"><b>Total: </b> £${parseFloat(itemsOnOrder.quantity * itemsOnOrder.price / 100 * 100).toFixed(2)}</p>
        
        `
@@ -22,7 +28,7 @@ module.exports = ({ completedOrder, categories }) => {
     <div class="container">
       <div class="orderConfirmation">
         <h1 class="orderConfirmationH1">Order Confirmation</h1>
-        <h3>Your Order Number is: #${completedOrder.orderNo}</h3>
+        <h3>Your Order Number is: #${completedOrder.orderNo} - requested for ${completedOrder.deliveryTime}</h3>
         <h5 class="orderConfDeliverySection">Delivery Details:</h5>
         <div>${completedOrder.firstName} ${completedOrder.surname} </div>
         <div>${completedOrder.firstLineDel} </div>

@@ -1,4 +1,4 @@
-module.exports = ({ content, links }) => {
+module.exports = ({ content }) => {
 
     return `
       <!DOCTYPE html>
@@ -12,6 +12,10 @@ module.exports = ({ content, links }) => {
   
        
           </head>
+          <header class="header-banner-checkout">
+          <div class="header-banner-checkout__text-box"> Chopstix
+          </div> <div class="header-banner-checkout__review">Order Confirmation</div>
+  </header>
         <body>
         <div id="userNotification" class="">
         

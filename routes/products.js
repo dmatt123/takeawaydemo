@@ -3,8 +3,8 @@ const productsRepo = require("../repositories/products");
 const categoryRepo = require("../repositories/category");
 const cartsRepo = require("../repositories/carts");
 
-const productListings = require("../views/products/index");
 
+const productListings = require("../views/products/index");
 
 
 const router = express.Router();
@@ -12,6 +12,7 @@ const router = express.Router();
 
 router.get('/takeawaydemo', async (req,res) => {
 
+    
 let cart
 
 try {

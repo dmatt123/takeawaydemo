@@ -2,7 +2,9 @@ const express = require("express");
 const multer = require("multer");
 
 const productsRepo = require("../../repositories/products");
+const categoryRepo = require("../../repositories/category")
 const usersRepo = require("../../repositories/users");
+const extrasRepo = require("../../repositories/extras");
 const newProdTemplate = require("../../views/admin/products/new");
 const productsTemplate = require("../../views/admin/products/index");
 const productEditTemplate = require("../../views/admin/products/edit");
@@ -37,9 +39,11 @@ router.get("/products", isLoggedIn, async (req, res) => {
 //   res.send(productsTemplate({ products }));
 // });
 
-router.get("/products/new", isLoggedIn, (req, res) => {
-  res.send(newProdTemplate({}));
-});
+router.get("/products/new", isLoggedIn, async (req, res) => {
+  let extras = await extrasRepo.getAll();
+  
+  res.send(newProdTemplate({extras}));
+})
 
 // save new product
 
@@ -50,29 +54,36 @@ router.post(
   [productTitleValidation, productPriceValidation],
   handleErrors(newProdTemplate),
   async (req, res) => {
-    let { title, price, RRP, metatitle, metadescription, description, spice } = req.body;
-    price = (Math.round(price * 100) / 100).toFixed(2)
+    let { title, price, description, spice, extras } = req.body;
+    console.log(extras)
+    price = parseFloat((price * 100) / 100)
+    if (extras.length < 1) {
+      extras = []
+    }
+
     const product = await productsRepo.create({
       title,
       price,
       description,
       spice,
-      categories: []
+      categories: [],
+      extras
     });
     
-    res.redirect("/products");
+    res.redirect("/admin/products");
   }
 );
 
 // get and update product
 
 router.get("/products/:id/edit", isLoggedIn, async (req, res) => {
+  const extras = await extrasRepo.getAll();
   const product = await productsRepo.getOne(req.params.id);
   if (!product) {
     return res.send("no product found");
   }
 
-  res.send(productEditTemplate({ product }));
+  res.send(productEditTemplate({ product, extras }));
 });
 
 //update product post route
@@ -87,23 +98,40 @@ router.post(
     return { product };
   }),
   async (req, res) => {
-    let { title, price, description, spice } = req.body;
-    price = (Math.round(price * 100) / 100).toFixed(2)
-    const changes = {title,price,description,spice}
+    let { title, price, description, spice, extras } = req.body;
+    price = parseFloat((price * 100) / 100)
+    if (extras.length < 1) {
+      extras = []
+    }
+    const changes = {title,price,description,spice, extras}
     try {
       await productsRepo.update(req.params.id, changes);
     } catch {
       res.send(productEditTemplate({ errors, product }));
     }
-    res.redirect("/products");
+    res.redirect("/admin/products");
   }
 );
 
 //delete product route
 
 router.post("/products/:id/delete", isLoggedIn, async (req, res) => {
-  const product = await productsRepo.delete(req.params.id);
-  res.redirect("/products");
+let product = await productsRepo.getOne(req.params.id);
+let category;
+let products;
+  ///REMEMBER TO DELETE PRODUCTID FROM ALL CATEGORIES
+
+  for (prod of product.categories) {
+   category = await categoryRepo.getOne(prod);
+   products = category.products.filter((item) => item.id !== req.params.id);
+
+   await categoryRepo.update(prod, { products });
+
+  }
+  
+  const productDelete = await productsRepo.delete(req.params.id)
+
+  res.redirect("/admin/products");
   // res.send("test")
 });
 

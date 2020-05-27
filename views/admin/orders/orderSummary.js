@@ -3,12 +3,21 @@ const layout = require('../layout');
 module.exports = ({ order }) => {
 
   const renderedItems = order.cart.items
-  .map((item) => { return `
+  .map((item) => { 
+    let extras;
+    if (!item.extras) {
+      extras = ``
+    } else {
+      extras = `with ${item.extras[0].name}`
+    }
+    
+    return `
       <tr>
-      <td> ${item.title} </td>
+      <td> ${item.title} ${extras}</td>
       <td> ${item.quantity} </td>
       <td> ${parseFloat(item.price / 100 * 100).toFixed(2)}</td>
       <td> ${parseFloat(item.price / 100 * 100).toFixed(2) * item.quantity}</td>
+      
     </tr>
 
 
@@ -19,6 +28,7 @@ module.exports = ({ order }) => {
     content: `
       <div class="control">
         <h1 class="subtitle">Order No: ${order.orderNo}</h1>  
+        <h2> Requested for ${order.deliveryTime}</h2>
       </div>
       <div class="container">
       <div class="row">

@@ -5,7 +5,23 @@ const productsRepo = require("../repositories/products");
 const categoryRepo = require("../repositories/category");
 const ordersRepo = require("../repositories/orders");
 const promosRepo = require("../repositories/promotions")
+const extrasRepo = require("../repositories/extras");
 
+
+
+const {
+  requireFirstName,
+  requireSurname,
+  requireFirstLineDel,
+  requireSecondLineDel,
+  requireTelNumber,
+  Email,
+  postcodeValidation
+} = require("./admin/validators");
+
+const {
+  handleErrors
+} = require("./admin/middlewares");
 
 const orderCompleteTemplate = require("../views/orders/checkoutdetails");
 const orderConfirmationTemplate = require("../views/orders/orderconfirmation")
@@ -20,10 +36,58 @@ router.get("/:cartId", async (req,res,next) => {
   }).catch(err => {
     console.log(err)
     res.status(500).json({
-      message: err
+      error: err
     })
   })
 })
+
+router.get("/:cartId/:prodId/:extrasId/show", async(req,res,next) => {
+  const extras = await extrasRepo.getOne(req.params.extrasId)
+  .then(product => {
+    res.status(200).json({product: product})
+  }).catch(err => {
+    console.log(err)
+    res.status(500).json({
+      error: err
+    })
+  })
+
+})
+
+router.post("/:cartId/:prodId/:extrasId/add", async (req,res) => {
+  const product = await productsRepo.getOne(req.params.prodId)
+
+    const allExtras = await extrasRepo.getOne(product.extras)
+    console.log(allExtras)
+  let extra = []
+  
+  
+ let found = allExtras.products.find((item) => item.id == req.params.extrasId);
+      
+  extra.push(found);
+    console.log(extra)
+  
+    
+    product.price = (product.price + extra[0].price)
+
+
+
+
+  const cart = await cartsRepo.getOne(req.params.cartId)
+  .then(cart => {
+            cart.items.push({ id: req.params.prodId + '-' + req.params.extrasId, title: product.title, price: product.price, extras: extra, quantity: 1 });
+           cartsRepo.update(cart.id, {
+            items: cart.items,
+          }); 
+   res.status(200).json({
+    cart: cart
+    }); }
+  ).catch(err => {
+      console.log(err)
+      res.status(500).json({error: err})
+  })
+  })
+
 
 router.post("/:cartId/:prodId", async (req,res) => {
 let existingItem; 
@@ -130,18 +194,39 @@ await cartsRepo.update(cart.id, cart)
 //get order complete page
 router.get("/cart/review", async (req, res) => {
   if (!req.session.cartId) {
-    res.redirect("/");
+    res.redirect("/takeawaydemo");
   }
 
   const cart = await cartsRepo.getOne(req.session.cartId);
+
+  if (cart.items.length < 1) {
+    res.redirect("/takeawaydemo")
+  }
   res.send(orderCompleteTemplate({cart}));
 });
 
-router.post("/cart/review/confirm", async (req, res) => {
+router.post("/cart/review/confirm", 
+[
+  Email, 
+  postcodeValidation,
+  requireFirstName,
+  requireSurname,
+  requireFirstLineDel,
+  requireTelNumber
+]
+  , handleErrors(orderCompleteTemplate), async (req, res) => {
   if (!req.session.cartId) {
     res.redirect("/");
   }
+
+
   const cart = await cartsRepo.getOne(req.session.cartId);
+  
+/// change this to display an error
+  if (cart.items.length < 1) {
+    res.redirect("/takeawaydemo")
+  }
+
   const orders = await ordersRepo.getAll()
   const categories = await categoryRepo.getAll();
   console.log(orders.length)
@@ -153,6 +238,8 @@ router.post("/cart/review/confirm", async (req, res) => {
     secondLineDel,
     postcode,
     telnumber,
+    deliveryTime
+
   } = req.body;
   
   let orderTotal = 0
@@ -201,7 +288,8 @@ if (grandTotal < 0) {
     orderDate,
     orderTotal,
     discountValue,
-    grandTotal
+    grandTotal,
+    deliveryTime
   });
 
   req.session.cartId = null;

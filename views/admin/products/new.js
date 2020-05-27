@@ -1,7 +1,16 @@
 const layout = require("../layout");
 const { getError } = require("../../helpers");
 
-module.exports = ({ errors }) => {
+module.exports = ({ errors, extras }) => {
+
+  const renderedExtras = extras
+  .map(extra => {
+    console.log(extra)
+    return `
+    <option value="${extra.id}">${extra.title}</option> `
+  }).join('');
+
+
   return layout({
     content: `
     <div class="columns is-centered">
@@ -35,6 +44,14 @@ module.exports = ({ errors }) => {
            <option value="spice2">2</option>
            <option value="spice3">3</option>
          </select>
+
+         <div class="field">
+         <label class="label">Extras Category:</label>
+         <select id="extras" name="extras">
+           <option value="">N/A</option>
+          ${renderedExtras}
+         </select>
+
 
 
           <br />

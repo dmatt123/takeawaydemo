@@ -12,6 +12,8 @@ module.exports = ({ products }) => {
   const renderedProducts = products
     .map(product => {
 
+      product.price = parseFloat((product.price * 100) / 100).toFixed(2)
+
 
       return `
       <tr>

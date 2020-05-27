@@ -56,7 +56,8 @@ line-height: 1.34; }
           font-size: 10rem;
           font-weight: 400;
           letter-spacing: 3.5rem;
-          animation: showText 5s ease-out; }
+          animation: showText 5s ease-out; 
+        }
 
         #postcodeSuccessMsg {
           position: absolute;
@@ -73,6 +74,53 @@ line-height: 1.34; }
           font-size: 3rem;
 
     
+        }
+
+        #modal {
+          /* This way it could be display flex or grid or whatever also. */
+          display: none;
+          
+          /* Probably need media queries here */
+          width: 40rem;
+          max-width: 100%;
+          
+          height: 30rem;
+          max-height: 100%;
+          
+          position: fixed;
+          
+          z-index: 1;
+          
+          left: 50%;
+          top: 50%;
+          
+          /* Use this for centering if unknown width/height */
+          transform: translate(-50%, -50%);
+          
+          /* If known, negative margins are probably better (less chance of blurry text). */
+          /* margin: -200px 0 0 -200px; */
+          
+          background: white;
+          box-shadow: 0 0 60px 10px rgba(0, 0, 0, 0.9);
+        }
+     
+   
+        .modal-guts {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+          padding: 20px 50px 20px 20px;
+        }
+        
+        .extras {
+          padding: 1rem;
+        }
+
+        .extraPrice {
+          padding: 1rem;
         }
 
         #postcodeFailureMsg {
@@ -105,6 +153,63 @@ line-height: 1.34; }
       
           }
 
+          #checkoutBtnMain {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            text-align: center;
+            transform: translate(-50%, -50%);
+            display: none;
+            color: #fff;
+            font-weight: 600;
+            letter-spacing: 1.10;
+            background-color: white;
+            color: rgba(40, 180, 133, 1);
+            padding: 0.75rem;
+            text-transform: uppercase;
+            text-decoration: none;
+            padding: 1.5rem 4rem;
+            border-radius: 1rem;
+            transition: all .2s;
+           font-size: 1.6rem;
+            border: none;
+            cursor: pointer; 
+            margin-left: 0;
+            margin-top: 6rem;
+          }
+
+#btnCheckout:link,
+#btnCheckout:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.5rem 4rem;
+  display: inline-block;
+  border-radius: 10rem;
+  transition: all .2s;
+  font-size: 1.6rem;
+  border: none;
+  cursor: pointer; 
+}
+
+
+#checkoutBtn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+  #checkoutBtn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0; }
+
+#checkoutBtn:active, #checkoutBtn:focus {
+  outline: none;
+  transform: translateY(-1px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+
+
+          #checkoutBtn:hover {
+            cursor: pointer;
+          }
+
+
           .postcodeInput_text {
             padding: 1rem;
             text-transform: uppercase;
@@ -112,16 +217,26 @@ line-height: 1.34; }
             display: block;
           }
 
+          #discountCodeSection {
+            display:inline-flex;
+          }
           #discountCodeInput {
-            border: 1px solid rgba(126, 213, 111, 0.8);
-            padding: 1rem;
-            margin: 2rem 0rem;
-            color:  black;
-            font-weight: 700;
             text-transform: uppercase;
-            border-radius: 10px;
             text-align: center;
+            background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8));
+            border: 1px solid white;
+            color: white;
+            outline: none;
+            width:50%;
 
+          }
+
+
+
+          #discountCodeInput::placeholder {
+            text-transform: uppercase;
+            text-align: center;
+            color: white;
           }
           #inputBoxPostcode {
             border: 1px solid rgba(126, 213, 111, 0.8);
@@ -134,25 +249,23 @@ line-height: 1.34; }
             text-align: center;
                    }
 
-                   .standardInput-email,
-                   .standardInput-firstLineAdd,
-                   .standardInput-secondLineAdd,
-                   .standardInput-postcode,
-                   .standardInput-telNumber,
-                   .standardInput-firstName,
-                   .standardInput-surname
-
-                   {
-                    border: 1px solid rgba(126, 213, 111, 0.8);
-                    padding: 0.5rem;
+                   .standardInput
+                  {
+                    border: none;
+                    outline: none;
+                    border-bottom: 0.5px solid rgba(126, 213, 111, 0.8);
+                    display: flex;
                     margin: 1rem;
-                    color:  black;
-                    font-weight: 700;
-                    text-transform: uppercase;
-                    border-radius: 10px;
-                    text-align: center;
-                    width: 90vw;
-                           }
+                    padding: 1rem;
+                    width: 50%;
+                  }
+
+                  .standardInput:hover,
+                  .standardInput:active
+                  {
+                   border: 1px solid rgba(126, 213, 111, 0.8);
+                  }
+                           
 
                         
 
@@ -207,6 +320,7 @@ display: inline-flex;
   font-size: 1rem;
   font-weight: 300;
   margin: 0.1rem 1rem;
+  width: 50%;
 }
 
 #sectionMenu {
@@ -218,7 +332,7 @@ display: inline-flex;
 }
 
 .product {
-  margin: 3rem;
+  margin: 1.5rem;
 }
 
 .productSection {
@@ -228,6 +342,11 @@ display: inline-flex;
 .menu {
   margin: 0 auto;
   width: 50vw;
+}
+
+.menuReview {
+  margin: 0 auto;
+  width: 100vw;
 }
 
 .orderDetail {
@@ -240,6 +359,7 @@ margin-left: 0.5rem;
 
 .discountDetail {
 font-weight: bold;
+color: #ff0000;
 }
 
 .cart {
@@ -261,18 +381,72 @@ box-shadow: 2px -1px 6px -1px rgba(0,0,0,0.42);
   
 }
 
+#cartMinimize {
+position: absolute;
+top: 0;
+right: 0;
+font-weight: 800px;
+font-size: 2rem;
+padding: 0;
+margin-right: 1rem;
+color: white;
+}
+
+#cartMinimize:hover {
+  cursor: pointer;
+}
+
+#cartMobile {
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8));
+  display: none;
+  width: 100vw;
+  text-align: center;
+  font-size: 2rem;
+  position: fixed;
+  bottom: 0%;
+  right: 0;
+  color: white;
+  text-transform: uppercase;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+#cartMobile:hover {
+
+  font-size: 2.1rem;
+
+}
 .cartReview {
+margin: 2rem;
+float: right;
+  bottom: 0;
+  right: 0;
   background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8));
   color: white;
   -webkit-box-shadow: 2px -1px 6px -1px rgba(0,0,0,0.42);
 -moz-box-shadow: 2px -1px 6px -1px rgba(0,0,0,0.42);
 box-shadow: 2px -1px 6px -1px rgba(0,0,0,0.42);
   padding: 2rem;
+  margin-top: 10vh;
+  margin-right: 10vw;
+  font-size: 1.2rem;
   animation: showText 1s ease-out;
   border-radius: 10px;
-  width: 90vw;
-  margin: 2rem;
   
+}
+
+.extraCart {
+  margin: 0 1rem;
+}
+
+@media (max-width: 700px) {
+  .cartReview {
+    float: none;
+    margin: 0 auto;
+    margin-right: 50%;
+    width:80%;
+
+  }
 }
 
 .cartHeading {
@@ -281,7 +455,6 @@ box-shadow: 2px -1px 6px -1px rgba(0,0,0,0.42);
 
 .cartDetailHeading {
   font-size: 1.9rem;
-  margin: 1rem;
   font-weight: 800;
 }
 
@@ -307,6 +480,7 @@ box-shadow: 2px -1px 6px -1px rgba(0,0,0,0.42);
 .cartQty {
   font-size: 1.2rem;
 }
+
 
 .Total {
   margin-top: 2rem;
@@ -339,7 +513,52 @@ button:hover {
   margin-left: 1rem;
 }
 
-.checkoutBtn {
+.header-banner-checkout {
+  height: 25vh;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../images/headerGraphic.jpg);
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 65vh, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 65vh, 0 100%); 
+  margin-bottom: 5rem;}
+
+  .header-banner-checkout__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; 
+      color: #fff;
+      text-transform: uppercase;
+      backface-visibility: hidden;
+      margin-bottom: 6rem;          
+       display: block;
+        font-size: 10rem;
+        font-weight: 400;
+        letter-spacing: 3.5rem;
+        animation: showText 5s ease-out; }
+
+        .header-banner-checkout__review {
+          position: absolute;
+          top: 80%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          text-transform: uppercase;
+          backface-visibility: hidden;
+          color: #fff;
+          display: block;
+          margin-bottom: 6rem;  
+          font-size: 4rem;
+          font-weight: 400;      
+        }  
+
+
+
+
+.checkoutBtn,
+.reedemBtn,
+.confirmBtn {
   margin: 1rem;
   font-size: 1rem;
   font-weight: 600;
@@ -357,13 +576,9 @@ button:hover {
 }
 
 .row {
-  margin-bottom: 25rem;
+  margin-bottom: 3rem;
 }
 
-.container {
-  width: 100%;
-  margin: 0 auto;
-}
 
 .deliveryForm {
   width: 100%;
@@ -398,14 +613,35 @@ button:hover {
   margin: 1rem 0rem;
 }
 
+.is-danger {
+  font-size: 1rem;
+  color: red;
+}
+
 
 @media (max-width: 900px) {
   .header-banner__text-box { 
-  font-size: 4rem;
+  font-size: 4rem; }
+  .header-banner-checkout__text-box {
+    font-size: 4rem;
+  }
+  .header-banner-checkout__review {
+    font-size: 2rem;
   }
 
-  .menu {
-    width: 100%;
+  #checkoutBtnMain {
+    padding: 0.75rem;
+    padding: 1.2rem 3rem;
+   font-size: 1.3rem;
+  
+  }
+
+#btnCheckoutMain:link,
+#btnCheckoutMain:visited {
+padding: 1.2rem 3rem;
+border-radius: 10rem;
+
+}
   }
 
   #postcodeSuccessMsg {
@@ -414,7 +650,7 @@ font-size: 1.5rem;
   .postcodeInput_text {
     font-size: 1.5rem;
   }
-}
+
 
 
 
@@ -423,16 +659,53 @@ font-size: 1.5rem;
   .header-banner__text-box { 
   font-size: 3rem;
   letter-spacing: 1.5rem;
-
-  
   }
+  .header-banner-checkout__text-box {
+    font-size: 4rem;
+    letter-spacing: 1.5rem;
+  }
+  .header-banner-checkout__review {
+    font-size: 2rem;
+  }
+  .productDesc {
+    width: 100%;
+  }
+.cart {
+  display: none
 }
+#cartMobile {
+  display: block;
+}
+  }
+
   @media (max-width: 400px) {
     .header-banner__text-box { 
       font-size: 3rem;
       letter-spacing: 1.5rem;
     }
+
+    .header-banner-checkout__text-box {
+      font-size: 3rem;
+      letter-spacing: 1.5rem
+    }
+    .header-banner-checkout__review {
+      font-size: 1rem;
+    }
+
+
+
   }
+
+  @media (max-width: 699px){
+  .cartReview {
+    margin-left: 2rem;
+  }
+
+  .standardInput {
+    width: 100%;
+  }
+
+}
 
   #lds-hourglass {
     display: inline-block;

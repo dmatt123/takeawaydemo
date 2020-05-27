@@ -26,6 +26,9 @@ module.exports = ({ content }) => {
                       <a href="/admin/products"><i class="fa fa-star"></i> Products</a>
                     </div>
                     <div class="navbar-item">
+                    <a href="/admin/extras"><i class="fa fa-star"></i>Extras</a>
+                  </div>
+                    <div class="navbar-item">
                       <a href="/admin/categories"><i class="fa fa-star"></i> Categories</a>
                     </div>
                     <div class="navbar-item">
@@ -34,6 +37,8 @@ module.exports = ({ content }) => {
                   <div class="navbar-item">
                   <a href="/admin/promos"><i class="fa fa-star"></i>Promos</a>
                 </div>
+
+
 
                   </div>
                 </div>

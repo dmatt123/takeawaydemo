@@ -1,305 +1,1059 @@
 [
   {
     "title": "Deep Fried Shredded Crispy Chicken",
-    "price": "6.10",
-    "RRP": "",
-    "metatitle": "",
-    "metadescription": "",
+    "price": 6.1,
     "description": "In chilli sauce",
-    "productUrl": "Deep_Fried_Shredded_Crispy_Chicken",
+    "spice": "none",
     "categories": [
-      "e96fdfb4"
+      "70a0570d",
+      "ed93946d"
     ],
-    "id": "5f39d3c5",
-    "spice": "none"
+    "extras": "31ddbf3d",
+    "id": "67bf3a5c"
   },
   {
     "title": "Curried Chicken",
-    "price": "6.10",
-    "RRP": "",
-    "metatitle": "",
-    "metadescription": "",
+    "price": 6.1,
     "description": "",
-    "productUrl": "Curried_Chicken",
+    "spice": "none",
     "categories": [
-      "e96fdfb4"
+      "70a0570d",
+      "ed93946d"
     ],
-    "id": "343fe303"
+    "extras": "31ddbf3d",
+    "id": "7f68d36d"
   },
   {
     "title": "Salt & Pepper Chicken",
-    "price": "6.10",
-    "RRP": "",
-    "metatitle": "",
-    "metadescription": "",
+    "price": 6.1,
     "description": "",
-    "productUrl": "Salt_&_Pepper_Chicken",
+    "spice": "none",
     "categories": [
-      "e96fdfb4"
+      "70a0570d",
+      "ed93946d"
     ],
-    "id": "f65666ad"
+    "extras": "31ddbf3d",
+    "id": "7d8456d0"
   },
   {
     "title": "Chicken Balls in Batter",
-    "price": "6.10",
-    "RRP": "",
-    "metatitle": "",
-    "metadescription": "",
+    "price": 6.1,
     "description": "With sweet & sour sauce",
-    "productUrl": "Chicken_Balls_in_Batter",
+    "spice": "none",
     "categories": [
-      "e96fdfb4"
+      "70a0570d",
+      "ed93946d"
     ],
-    "id": "2375517a",
-    "spice": "none"
+    "extras": "31ddbf3d",
+    "id": "dc531293"
   },
   {
     "title": "Chicken Fried Rice",
-    "price": "6.00",
-    "RRP": "",
-    "metatitle": "",
-    "metadescription": "",
+    "price": 6,
     "description": "",
-    "productUrl": "Chicken_Fried_Rice",
+    "spice": "none",
     "categories": [
-      "e96fdfb4"
+      "70a0570d",
+      "ed93946d"
     ],
-    "id": "5145c353"
+    "extras": "31ddbf3d",
+    "id": "11aba540"
   },
   {
     "title": "Chopstix Special Platter",
-    "price": "9.50",
-    "RRP": "",
-    "metatitle": "",
-    "metadescription": "",
+    "price": 9.5,
     "description": "Barbecued spare ribs, prawn on toast, crispy spring rolls & deep fried Wonton served with sweet & sour sauce",
-    "productUrl": "Chopstix_Special_Platter",
+    "spice": "none",
     "categories": [
-      "3bc6ecb6"
+      "44395858"
     ],
-    "id": "693e481f",
-    "spice": "none"
+    "extras": [],
+    "id": "99a58bb9"
   },
   {
     "title": "Barbecued Spare Ribs",
-    "price": "5.50",
-    "RRP": "",
-    "metatitle": "",
-    "metadescription": "",
+    "price": 5.5,
     "description": "Strips of marinated spare ribs roasted to perfection",
-    "productUrl": "Barbecued_Spare_Ribs",
+    "spice": "none",
     "categories": [
-      "3bc6ecb6"
+      "44395858"
     ],
-    "id": "0c5c1432",
-    "spice": "none"
+    "extras": [],
+    "id": "432bdd8e"
   },
   {
     "title": "Peking Spare Ribs",
-    "price": "5.50",
-    "RRP": "",
-    "metatitle": "",
-    "metadescription": "",
+    "price": 5.5,
     "description": "With spicy sweet & sour sauce",
-    "productUrl": "Peking_Spare_Ribs",
+    "spice": "spice1",
     "categories": [
-      "3bc6ecb6"
+      "44395858"
     ],
-    "id": "64558c7b",
-    "spice": "none"
+    "extras": [],
+    "id": "afc17de9"
   },
   {
     "title": "Salt & Pepper Spare Ribs",
-    "price": "5.50",
-    "RRP": "",
-    "metatitle": "",
-    "metadescription": "",
+    "price": 5.5,
     "description": "Stir fried with spicy salt & fresh chopped green chillies",
-    "productUrl": "Salt_&_Pepper_Spare_Ribs",
+    "spice": "spice1",
     "categories": [
-      "3bc6ecb6"
+      "44395858"
     ],
-    "id": "2deb4388",
-    "spice": "none"
+    "extras": [],
+    "id": "f3664f25"
+  },
+  {
+    "title": "Spicy Mongolian",
+    "price": 4.5,
+    "description": "Chicken, beef OR lamb stir fried with soya sauce, chillies & spring onions",
+    "spice": "spice2",
+    "categories": [
+      "44395858"
+    ],
+    "extras": "abf9880c",
+    "id": "9d0df585"
   },
   {
     "title": "Deep Fried Wonton",
-    "price": "3.80",
-    "RRP": "",
-    "metatitle": "",
-    "metadescription": "",
-    "description": "",
-    "productUrl": "Deep_Fried_Wonton",
+    "price": 3.8,
+    "description": "With sweet & sour sauce",
+    "spice": "none",
     "categories": [
-      "3bc6ecb6"
+      "44395858"
     ],
-    "id": "86bc614b"
+    "extras": [],
+    "id": "74eace5b"
+  },
+  {
+    "title": "Crispy Spring Rolls",
+    "price": 3.5,
+    "description": "Freshly made daily with shredded chicken, roast pork, carrots & bamboo shoots",
+    "spice": "none",
+    "categories": [
+      "44395858"
+    ],
+    "extras": [],
+    "id": "209c1362"
+  },
+  {
+    "title": "Salt & Pepper Vegetable Spring Rolls",
+    "price": 3.8,
+    "description": "",
+    "spice": "none",
+    "categories": [
+      "44395858"
+    ],
+    "extras": [],
+    "id": "f3dd2c63"
+  },
+  {
+    "title": "Vegetarian Crispy Spring Rolls",
+    "price": 3.5,
+    "description": "With a fruity, tangy, sweet & sour sauce",
+    "spice": "none",
+    "categories": [
+      "44395858"
+    ],
+    "extras": [],
+    "id": "f94fdc6a"
+  },
+  {
+    "title": "Prawn Cocktail",
+    "price": 3.8,
+    "description": "",
+    "spice": "none",
+    "categories": [
+      "44395858"
+    ],
+    "extras": [],
+    "id": "afd006e2"
   },
   {
     "title": "Skewered Chicken Satay",
-    "price": "4.20",
-    "RRP": "",
-    "metatitle": "",
-    "metadescription": "",
-    "description": "",
-    "productUrl": "Skewered_Chicken_Satay",
+    "price": 4.2,
+    "description": "Thin strips of marinated chicken breast deep fried & served with a tangy,  spicy & satay sauce",
+    "spice": "none",
     "categories": [
-      "3bc6ecb6"
+      "44395858"
     ],
-    "id": "09b85014"
+    "extras": [],
+    "id": "be2d3f44"
+  },
+  {
+    "title": "Prawn Toast",
+    "price": 4.5,
+    "description": "Served with sweet & sour sauce",
+    "spice": "none",
+    "categories": [
+      "44395858"
+    ],
+    "extras": [],
+    "id": "c4db35de"
+  },
+  {
+    "title": "Stir Fried Salt & Pepper Chicken",
+    "price": 4.5,
+    "description": "",
+    "spice": "none",
+    "categories": [
+      "44395858"
+    ],
+    "extras": [],
+    "id": "a64af1b9"
+  },
+  {
+    "title": "Steamed Tiger Prawns",
+    "price": 4.5,
+    "description": "Served with hot chilli oil dip",
+    "spice": "none",
+    "categories": [
+      "44395858"
+    ],
+    "extras": [],
+    "id": "a7191c0e"
+  },
+  {
+    "title": "Kung Po Chicken",
+    "price": 6.1,
+    "description": "Szechuan, lightly battered & deep fried, blended with spicy sweet & sour sauce, garlic, fresh chopped chillies, water chestnuts & spring onion",
+    "spice": "spice1",
+    "categories": [
+      "ed93946d"
+    ],
+    "extras": "31ddbf3d",
+    "id": "ce344e53"
+  },
+  {
+    "title": "Sweet & Sour Chicken",
+    "price": 6.1,
+    "description": "Peking",
+    "spice": "none",
+    "categories": [
+      "ed93946d"
+    ],
+    "extras": "31ddbf3d",
+    "id": "a432d5b6"
+  },
+  {
+    "title": "Deep Fried Shredded Crispy Chicken",
+    "price": 6.1,
+    "description": "In chilli sauce",
+    "spice": "none",
+    "categories": [
+      "ed93946d"
+    ],
+    "extras": "31ddbf3d",
+    "id": "a2cda970"
+  },
+  {
+    "title": "Chicken with Ginger & Spring Onion",
+    "price": 6.1,
+    "description": "",
+    "spice": "none",
+    "categories": [],
+    "extras": "31ddbf3d",
+    "id": "82abbe9f"
   },
   {
     "title": "Wonton Soup",
-    "price": "2.80",
-    "RRP": "",
-    "metatitle": "",
-    "metadescription": "",
+    "price": 2.8,
     "description": "",
-    "productUrl": "Wonton_Soup",
+    "spice": "none",
     "categories": [
-      "39d328b2"
+      "c4d527d4"
     ],
-    "id": "3c232b4e"
+    "extras": [],
+    "id": "a1355b66"
   },
   {
     "title": "Peking Hot & Sour Soup",
-    "price": "2.80",
-    "RRP": "",
-    "metatitle": "",
-    "metadescription": "",
+    "price": 2.8,
     "description": "",
-    "productUrl": "Peking_Hot_&_Sour_Soup",
+    "spice": "none",
     "categories": [
-      "39d328b2"
+      "c4d527d4"
     ],
-    "id": "4a014229",
-    "spice": "spice1"
+    "extras": [],
+    "id": "788081dc"
   },
   {
     "title": "Chicken & Sweetcorn Soup",
-    "price": "2.50",
-    "RRP": "",
-    "metatitle": "",
-    "metadescription": "",
+    "price": 2.8,
     "description": "",
-    "productUrl": "Chicken_&_Sweetcorn_Soup",
+    "spice": "none",
     "categories": [
-      "39d328b2"
+      "c4d527d4"
     ],
-    "id": "228eac31"
+    "extras": [],
+    "id": "e7aa59ca"
   },
   {
     "title": "Crab Meat & Sweetcorn Soup",
-    "price": "2.50",
-    "RRP": "",
-    "metatitle": "",
-    "metadescription": "",
+    "price": 2.5,
     "description": "",
-    "productUrl": "Crab_Meat_&_Sweetcorn_Soup",
+    "spice": "none",
     "categories": [
-      "39d328b2"
+      "c4d527d4"
     ],
-    "id": "0874349f"
+    "extras": [],
+    "id": "2992ac0a"
   },
   {
     "title": "Seafood Soup",
-    "price": "2.80",
-    "RRP": "",
-    "metatitle": "",
-    "metadescription": "",
+    "price": 2.8,
     "description": "",
-    "productUrl": "Seafood_Soup",
+    "spice": "none",
     "categories": [
-      "39d328b2"
+      "c4d527d4"
     ],
-    "id": "cb516893"
+    "extras": [],
+    "id": "4dd1ca37"
+  },
+  {
+    "title": "Chicken & Mushroom Soup",
+    "price": 2.5,
+    "description": "",
+    "spice": "none",
+    "categories": [
+      "c4d527d4"
+    ],
+    "extras": [],
+    "id": "4dafe7b0"
+  },
+  {
+    "title": "Chicken Noodle Soup",
+    "price": 2.5,
+    "description": "",
+    "spice": "none",
+    "categories": [
+      "c4d527d4"
+    ],
+    "extras": [],
+    "id": "1cc627f1"
+  },
+  {
+    "title": "Fresh Vegetable Soup",
+    "price": 2.5,
+    "description": "",
+    "spice": "none",
+    "categories": [
+      "c4d527d4"
+    ],
+    "extras": [],
+    "id": "c30bb4c1"
+  },
+  {
+    "title": "Seafood Supreme",
+    "price": 6.8,
+    "description": "Stir fried prawn, squid & mussels in oyster sauce",
+    "spice": "none",
+    "categories": [
+      "85fe56ef"
+    ],
+    "extras": [],
+    "id": "37257f64"
   },
   {
     "title": "Szechuan Prawns",
-    "price": "6.80",
-    "RRP": "",
-    "metatitle": "",
-    "metadescription": "",
+    "price": 6.8,
     "description": "Stir fried with fresh chopped hot chillies, garlic & onion completed with spicy bean sauce",
-    "productUrl": "Szechuan_Prawns",
+    "spice": "none",
     "categories": [
-      "956455c2"
+      "85fe56ef"
     ],
-    "id": "cea1d195",
-    "spice": "spice1"
+    "extras": [],
+    "id": "fc705e31"
   },
   {
     "title": "Sweet & Sour Prawns",
-    "price": "6.80",
-    "RRP": "",
-    "metatitle": "",
-    "metadescription": "",
+    "price": 6.8,
     "description": "Peking style",
-    "productUrl": "Sweet_&_Sour_Prawns",
+    "spice": "none",
     "categories": [
-      "956455c2"
+      "85fe56ef"
     ],
-    "id": "c7b58f05",
-    "spice": "none"
+    "extras": [],
+    "id": "2fe29274"
   },
   {
     "title": "Kung Po Prawns",
-    "price": "6.80",
-    "RRP": "",
-    "metatitle": "",
-    "metadescription": "",
+    "price": 6.8,
     "description": "Lightly battered deep fried, blended with spicy sweet & sour sauce, garlic, fresh chopped chillies, water chestnuts & spring onion",
-    "productUrl": "Kung_Po_Prawns",
+    "spice": "none",
     "categories": [
-      "956455c2"
+      "85fe56ef"
     ],
-    "id": "869a6c92",
-    "spice": "spice1"
+    "extras": [],
+    "id": "3222095b"
   },
   {
-    "title": "Fried Prawn with Broccoli",
-    "price": "6.80",
-    "RRP": "",
-    "metatitle": "",
-    "metadescription": "",
-    "description": "",
-    "productUrl": "Fried_Prawn_with_Broccoli",
+    "title": "Seafood with Ginger & Spring Onions",
+    "price": 6.8,
+    "description": "Prawns, squid & mussels",
+    "spice": "none",
     "categories": [
-      "956455c2"
+      "85fe56ef"
     ],
-    "id": "83d1f082"
+    "extras": [],
+    "id": "1768520e"
+  },
+  {
+    "title": "Fried Prawns with Green Pepper",
+    "price": 6.8,
+    "description": "In black bean sauce",
+    "spice": "none",
+    "categories": [
+      "85fe56ef"
+    ],
+    "extras": [],
+    "id": "ff7eb865"
   },
   {
     "title": "Salt & Pepper Prawns",
-    "price": "6.80",
-    "RRP": "",
-    "metatitle": "",
-    "metadescription": "",
+    "price": 6.8,
     "description": "",
-    "productUrl": "Salt_&_Pepper_Prawns",
-    "categories": [
-      "956455c2"
-    ],
-    "id": "e66ef9de"
-  },
-  {
-    "title": "Egg Fried Rice",
-    "price": "2.29",
-    "description": "Standard Egg Fried Rice",
     "spice": "none",
     "categories": [
-      "e96fdfb4"
+      "85fe56ef"
     ],
-    "id": "17ab6fe2"
+    "extras": [],
+    "id": "ee746279"
+  },
+  {
+    "title": "Prawn Omelette",
+    "price": 6.8,
+    "description": "",
+    "spice": "none",
+    "categories": [
+      "85fe56ef"
+    ],
+    "extras": [],
+    "id": "3bb3b4d9"
+  },
+  {
+    "title": "Deep Fried Shredded Crispy Beef",
+    "price": 6.1,
+    "description": "In chilli sauce",
+    "spice": "none",
+    "categories": [
+      "b9406a92"
+    ],
+    "extras": [],
+    "id": "74a2c812"
+  },
+  {
+    "title": "Mongolian Beef",
+    "price": 6.1,
+    "description": "Stir fried with fresh chilli & spring onion",
+    "spice": "spice1",
+    "categories": [
+      "b9406a92"
+    ],
+    "extras": [],
+    "id": "afc66fcb"
+  },
+  {
+    "title": "Curried Beef",
+    "price": 6.1,
+    "description": "",
+    "spice": "none",
+    "categories": [
+      "b9406a92"
+    ],
+    "extras": [],
+    "id": "f8842bfe"
+  },
+  {
+    "title": "Beef with Green Pepper",
+    "price": 6.1,
+    "description": "In black bean sauce",
+    "spice": "none",
+    "categories": [
+      "b9406a92"
+    ],
+    "extras": [],
+    "id": "a1a40c1c"
+  },
+  {
+    "title": "Beef with Ginger & Spring Onion",
+    "price": 6.1,
+    "description": "",
+    "spice": "none",
+    "categories": [
+      "b9406a92"
+    ],
+    "extras": [],
+    "id": "c72cd3ea"
+  },
+  {
+    "title": "Beef with Broccoli in Oyster Sauce",
+    "price": 6.1,
+    "description": "",
+    "spice": "none",
+    "categories": [
+      "b9406a92"
+    ],
+    "extras": [],
+    "id": "345d5064"
+  },
+  {
+    "title": "Sliced Beef in Peking Sauce",
+    "price": 6.1,
+    "description": "",
+    "spice": "none",
+    "categories": [
+      "b9406a92"
+    ],
+    "extras": [],
+    "id": "39788014"
+  },
+  {
+    "title": "Chopstix Spicy Sweet & Sour Hot Pot",
+    "price": 6.8,
+    "description": "Consists of pork, chicken & shrimps",
+    "spice": "none",
+    "categories": [],
+    "extras": [],
+    "id": "986cdd06"
+  },
+  {
+    "title": "Barbecued Pork with Green Peppers",
+    "price": 6.1,
+    "description": "In black bean sauce",
+    "spice": "none",
+    "categories": [
+      "9b6aa502"
+    ],
+    "extras": [],
+    "id": "bb1c7982"
+  },
+  {
+    "title": "Barbecued Pork",
+    "price": 6.1,
+    "description": "In spicy Hoisin sauce",
+    "spice": "none",
+    "categories": [
+      "9b6aa502"
+    ],
+    "extras": [],
+    "id": "a8101fac"
+  },
+  {
+    "title": "Barbecued Pork with Broccoli",
+    "price": 6.1,
+    "description": "In oyster sauce",
+    "spice": "none",
+    "categories": [
+      "9b6aa502"
+    ],
+    "extras": [],
+    "id": "280b8248"
+  },
+  {
+    "title": "Sweet & Sour Pork",
+    "price": 6.1,
+    "description": "Peking",
+    "spice": "none",
+    "categories": [
+      "9b6aa502"
+    ],
+    "extras": [],
+    "id": "40170cd6"
+  },
+  {
+    "title": "Curried Barbecued Pork",
+    "price": 6.1,
+    "description": "",
+    "spice": "none",
+    "categories": [
+      "9b6aa502"
+    ],
+    "extras": [],
+    "id": "c1902a20"
+  },
+  {
+    "title": "Mongolian Lamb",
+    "price": 6.9,
+    "description": "Stir fried with fresh chillies & spring onion in soya sauce",
+    "spice": "none",
+    "categories": [
+      "a1792625"
+    ],
+    "extras": [],
+    "id": "b7115511"
+  },
+  {
+    "title": "Lamb with Green Pepper",
+    "price": 6.9,
+    "description": "In black bean sauce",
+    "spice": "none",
+    "categories": [
+      "a1792625"
+    ],
+    "extras": [],
+    "id": "4960056c"
+  },
+  {
+    "title": "Lamb with Ginger & Spring Onion",
+    "price": 6.9,
+    "description": "",
+    "spice": "none",
+    "categories": [
+      "a1792625"
+    ],
+    "extras": [],
+    "id": "b3971626"
+  },
+  {
+    "title": "Curried Lamb",
+    "price": 6.9,
+    "description": "",
+    "spice": "none",
+    "categories": [
+      "a1792625"
+    ],
+    "extras": [],
+    "id": "8af1bed4"
+  },
+  {
+    "title": "Bean Curd Stir Fried",
+    "price": 5.5,
+    "description": "With salt & pepper",
+    "spice": "none",
+    "categories": [
+      "c19aeb20"
+    ],
+    "extras": [],
+    "id": "88518840"
+  },
+  {
+    "title": "Bean Curd with Mixed Seasonal Vegetables",
+    "price": 5.5,
+    "description": "",
+    "spice": "none",
+    "categories": [
+      "c19aeb20"
+    ],
+    "extras": [],
+    "id": "7e4892a2"
+  },
+  {
+    "title": "Bean Curd with Green Pepper",
+    "price": 5.5,
+    "description": "In black bean sauce",
+    "spice": "none",
+    "categories": [
+      "c19aeb20"
+    ],
+    "extras": [],
+    "id": "dfc8980d"
+  },
+  {
+    "title": "Sweet & Sour Mixed Vegetables",
+    "price": 5,
+    "description": "",
+    "spice": "none",
+    "categories": [
+      "c19aeb20"
+    ],
+    "extras": [],
+    "id": "54b836f1"
+  },
+  {
+    "title": "Mixed Vegetables Fried Rice",
+    "price": 5,
+    "description": "",
+    "spice": "none",
+    "categories": [
+      "c19aeb20"
+    ],
+    "extras": [],
+    "id": "bf95ed82"
+  },
+  {
+    "title": "Fried Mushrooms",
+    "price": 5,
+    "description": "",
+    "spice": "none",
+    "categories": [
+      "c19aeb20"
+    ],
+    "extras": [],
+    "id": "b4ff7f66"
+  },
+  {
+    "title": "Curried Vegetables",
+    "price": 5,
+    "description": "",
+    "spice": "none",
+    "categories": [
+      "c19aeb20"
+    ],
+    "extras": [],
+    "id": "c8263da0"
+  },
+  {
+    "title": "Broccoli & Bamboo Shoots",
+    "price": 5,
+    "description": "",
+    "spice": "none",
+    "categories": [
+      "c19aeb20"
+    ],
+    "extras": [],
+    "id": "8c18e411"
+  },
+  {
+    "title": "Mixed Seasonal Veg in Oyster Sauce",
+    "price": 5,
+    "description": "",
+    "spice": "none",
+    "categories": [
+      "c19aeb20"
+    ],
+    "extras": [],
+    "id": "85747882"
+  },
+  {
+    "title": "Stir Fried Bean Sprouts",
+    "price": 5,
+    "description": "",
+    "spice": "none",
+    "categories": [
+      "c19aeb20"
+    ],
+    "extras": [],
+    "id": "e7081625"
+  },
+  {
+    "title": "Stir Fried Seasonal Vegetables",
+    "price": 5,
+    "description": "",
+    "spice": "none",
+    "categories": [
+      "c19aeb20"
+    ],
+    "extras": [],
+    "id": "46f6ab6e"
+  },
+  {
+    "title": "Stir Fried Broccoli",
+    "price": 5,
+    "description": "",
+    "spice": "none",
+    "categories": [
+      "c19aeb20"
+    ],
+    "extras": [],
+    "id": "85ebadc9"
+  },
+  {
+    "title": "Omelette",
+    "price": 5,
+    "description": "Choice of Mushroom or Vegetable",
+    "spice": "none",
+    "categories": [
+      "c19aeb20"
+    ],
+    "extras": "260a7b87",
+    "id": "e40bbd08"
+  },
+  {
+    "title": "Chopstix Special Satay",
+    "price": 6.9,
+    "description": "Consists of prawns, chicken & barbecued pork",
+    "spice": "none",
+    "categories": [
+      "04d6640b"
+    ],
+    "extras": [],
+    "id": "df1ad432"
+  },
+  {
+    "title": "Chicken Satay",
+    "price": 6.5,
+    "description": "",
+    "spice": "none",
+    "categories": [
+      "04d6640b"
+    ],
+    "extras": [],
+    "id": "0ff4dee1"
+  },
+  {
+    "title": "Prawn Satay",
+    "price": 6.8,
+    "description": "",
+    "spice": "none",
+    "categories": [
+      "04d6640b"
+    ],
+    "extras": [],
+    "id": "a930dba5"
+  },
+  {
+    "title": "Beef Satay",
+    "price": 6.5,
+    "description": "",
+    "spice": "none",
+    "categories": [
+      "04d6640b"
+    ],
+    "extras": [],
+    "id": "23e540fc"
+  },
+  {
+    "title": "Barbecued Pork Satay",
+    "price": 6.5,
+    "description": "",
+    "spice": "none",
+    "categories": [
+      "04d6640b"
+    ],
+    "extras": [],
+    "id": "8f8e0d83"
+  },
+  {
+    "title": "Lamb Satay",
+    "price": 6.9,
+    "description": "",
+    "spice": "none",
+    "categories": [
+      "04d6640b"
+    ],
+    "extras": [],
+    "id": "403b7551"
+  },
+  {
+    "title": "Roast Duck Satay",
+    "price": 6.9,
+    "description": "",
+    "spice": "none",
+    "categories": [
+      "04d6640b"
+    ],
+    "extras": [],
+    "id": "9ed12605"
+  },
+  {
+    "title": "Curry Sauce",
+    "price": 2,
+    "description": "",
+    "spice": "none",
+    "categories": [
+      "d8fd004b"
+    ],
+    "extras": [],
+    "id": "9ea12ced"
+  },
+  {
+    "title": "Sweet & Sour Sauce",
+    "price": 2,
+    "description": "",
+    "spice": "none",
+    "categories": [
+      "d8fd004b"
+    ],
+    "extras": [],
+    "id": "07ea7f2d"
+  },
+  {
+    "title": "Satay Sauce",
+    "price": 2,
+    "description": "",
+    "spice": "none",
+    "categories": [
+      "d8fd004b"
+    ],
+    "extras": [],
+    "id": "9c5c0093"
+  },
+  {
+    "title": "Chips",
+    "price": 2,
+    "description": "80p extra for a large portion",
+    "spice": "none",
+    "categories": [
+      "d8fd004b"
+    ],
+    "extras": "641c8481",
+    "id": "c3a52f96"
+  },
+  {
+    "title": "Chips & Curry Sauce",
+    "price": 3,
+    "description": "",
+    "spice": "none",
+    "categories": [
+      "d8fd004b"
+    ],
+    "extras": [],
+    "id": "a8fc0845"
+  },
+  {
+    "title": "Chips with Sweet & Sour Sauce",
+    "price": 3,
+    "description": "",
+    "spice": "none",
+    "categories": [
+      "d8fd004b"
+    ],
+    "extras": [],
+    "id": "b74ed4f8"
+  },
+  {
+    "title": "Boiled Rice & Curry Sauce",
+    "price": 3,
+    "description": "",
+    "spice": "none",
+    "categories": [
+      "d8fd004b"
+    ],
+    "extras": [],
+    "id": "8d4b357c"
+  },
+  {
+    "title": "Fried Rice & Curry Sauce",
+    "price": 3,
+    "description": "",
+    "spice": "none",
+    "categories": [
+      "d8fd004b"
+    ],
+    "extras": [],
+    "id": "948c3a44"
+  },
+  {
+    "title": "Chips, Fried Rice & Curry Sauce",
+    "price": 3.5,
+    "description": "",
+    "spice": "none",
+    "categories": [
+      "d8fd004b"
+    ],
+    "extras": [],
+    "id": "f0dedc31"
+  },
+  {
+    "title": "Chips & Gravy",
+    "price": 3,
+    "description": "",
+    "spice": "none",
+    "categories": [
+      "d8fd004b"
+    ],
+    "extras": [],
+    "id": "86ef4d38"
   },
   {
     "title": "Salt & Pepper Chips",
-    "price": "2.50",
-    "description": "Try our NEW Salt & Pepper Chips! ONLY £2.50!",
-    "spice": "spice2",
+    "price": 3.5,
+    "description": "",
+    "spice": "none",
     "categories": [
-      "e96fdfb4"
+      "d8fd004b"
     ],
-    "id": "d113cfce"
+    "extras": [],
+    "id": "81a4de69"
+  },
+  {
+    "title": "Prawn Crackers",
+    "price": 1.2,
+    "description": "",
+    "spice": "none",
+    "categories": [
+      "d8fd004b"
+    ],
+    "extras": [],
+    "id": "4ea574a3"
+  },
+  {
+    "title": "Banana Fritter with Syrup",
+    "price": 3,
+    "description": "",
+    "spice": "none",
+    "categories": [
+      "be362598"
+    ],
+    "extras": [],
+    "id": "6e3d1e00"
+  },
+  {
+    "title": "Pineapple Fritter with Syrup",
+    "price": 3,
+    "description": "",
+    "spice": "none",
+    "categories": [
+      "be362598"
+    ],
+    "extras": [],
+    "id": "60b743f4"
+  },
+  {
+    "title": "Apple Fritter with Syrup",
+    "price": 3,
+    "description": "",
+    "spice": "none",
+    "categories": [
+      "be362598"
+    ],
+    "extras": [],
+    "id": "076ae6cf"
+  },
+  {
+    "title": "Lychees with Syrup",
+    "price": 3,
+    "description": "Chinese tropical fruit",
+    "spice": "none",
+    "categories": [
+      "be362598"
+    ],
+    "extras": [],
+    "id": "16013022"
+  },
+  {
+    "title": "Irn-Bru",
+    "price": 1,
+    "description": "",
+    "spice": "none",
+    "categories": [
+      "918ed74d"
+    ],
+    "extras": "122d6eb3",
+    "id": "28bdd2d8"
+  },
+  {
+    "title": "Coca-Cola",
+    "price": 1,
+    "description": "",
+    "spice": "none",
+    "categories": [
+      "918ed74d"
+    ],
+    "extras": "122d6eb3",
+    "id": "c53082c4"
+  },
+  {
+    "title": "Sprite",
+    "price": 1,
+    "description": "",
+    "spice": "none",
+    "categories": [
+      "918ed74d"
+    ],
+    "extras": "122d6eb3",
+    "id": "38fb0f80"
+  },
+  {
+    "title": "Fanta",
+    "price": 1,
+    "description": "",
+    "spice": "none",
+    "categories": [
+      "918ed74d"
+    ],
+    "extras": "122d6eb3",
+    "id": "f3132775"
   }
 ]

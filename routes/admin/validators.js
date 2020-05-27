@@ -60,6 +60,38 @@ module.exports = {
     .trim()
     .isLength({ min: 5, max: 40 })
     .withMessage("Must be a valid title between 5 and 40 characters"),
+    
+  postcodeValidation: check("postcode")
+  .trim()
+  .isLength({ min: 6, max: 10 })
+  .withMessage("Postcode is invalid"),
+
+  requireFirstName: check("firstName")
+  .trim()
+  .isLength({ min: 1, max: 50 })
+  .withMessage("First Name must be provided"),
+
+  requireSurname: check("surname")
+  .trim()
+  .isLength({ min: 1, max: 50 })
+  .withMessage("Surname must be provided"),
+
+  requireFirstLineDel: check("firstLineDel")
+  .trim()
+  .isLength({ min: 1, max: 50 })
+  .withMessage("First Line of address must be provided"),
+
+  requireTelNumber: check("telNumber")
+  .trim()
+  .isInt()
+  .isLength({ min: 6, max: 50 })
+  .withMessage("Telephone Number must be provided"),
+
+  Email: check("email")
+  .trim()
+  .normalizeEmail()
+  .isEmail()
+  .withMessage("Must be a valid email address"),
 
   productPriceValidation: check("price")
     .trim()

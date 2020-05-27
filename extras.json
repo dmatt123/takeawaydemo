@@ -1,0 +1,118 @@
+[
+  {
+    "title": "Select a Side",
+    "products": [
+      {
+        "name": "Boiled Rice",
+        "price": 0,
+        "id": "b06d5660"
+      },
+      {
+        "name": "Chips",
+        "price": 0,
+        "id": "8d54c6b0"
+      },
+      {
+        "name": "Egg Fried Rice",
+        "price": 0.2,
+        "id": "2ff19f88"
+      },
+      {
+        "name": "Soft Noodles",
+        "price": 0.7,
+        "id": "9c74b419"
+      }
+    ],
+    "id": "31ddbf3d"
+  },
+  {
+    "title": "Sides for Curry Dishes",
+    "products": [
+      {
+        "name": "Boiled Rice",
+        "price": 0,
+        "id": "99a74bc9"
+      },
+      {
+        "name": "Fried Rice",
+        "price": 0,
+        "id": "d1eaf4b0"
+      }
+    ],
+    "id": "e571089b"
+  },
+  {
+    "title": "Spicy Mongolian Choices",
+    "products": [
+      {
+        "name": "Chicken",
+        "price": 0,
+        "id": "fd084c0d"
+      },
+      {
+        "name": "Beef",
+        "price": 0,
+        "id": "65d200ed"
+      },
+      {
+        "name": "Lamb",
+        "price": 0,
+        "id": "701eab09"
+      }
+    ],
+    "id": "abf9880c"
+  },
+  {
+    "title": "Choose Omelette",
+    "products": [
+      {
+        "name": "Mushroom",
+        "price": 0,
+        "id": "a9519fcd"
+      },
+      {
+        "name": "Vegetable",
+        "price": 0,
+        "id": "cbbdb58c"
+      }
+    ],
+    "id": "260a7b87"
+  },
+  {
+    "title": "Portion Size",
+    "products": [
+      {
+        "name": "Regular",
+        "price": 0,
+        "id": "e21970f0"
+      },
+      {
+        "name": "Large",
+        "price": 0.8,
+        "id": "625e0d8c"
+      }
+    ],
+    "id": "641c8481"
+  },
+  {
+    "title": "Drink Size",
+    "products": [
+      {
+        "name": "0.33L",
+        "price": 0,
+        "id": "da1a2ff9"
+      },
+      {
+        "name": "1L",
+        "price": 1,
+        "id": "253d8f1d"
+      },
+      {
+        "name": "2L",
+        "price": 1.5,
+        "id": "f532e1b2"
+      }
+    ],
+    "id": "122d6eb3"
+  }
+]

@@ -1,15 +1,15 @@
 # DO NOT REMOVE. CLOUDLINUX PASSENGER CONFIGURATION BEGIN
-PassengerAppRoot "/home/dmatthew/repositories/takeawaydemo"
+PassengerAppRoot "/home/dmatthew/repositories/takeaway"
 PassengerBaseURI "/"
-PassengerNodejs "/home/dmatthew/nodevenv/repositories/takeawaydemo/12/bin/node"
+PassengerNodejs "/home/dmatthew/nodevenv/repositories/takeaway/12/bin/node"
 PassengerAppType node
 PassengerStartupFile index.js
 # DO NOT REMOVE. CLOUDLINUX PASSENGER CONFIGURATION END
 
 DirectoryIndex disabled
 RewriteEngine On
-RewriteRule ^$ http://127.0.0.1:33248/ [P,L]
+RewriteRule ^$ http://127.0.0.1:33233/ [P,L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ http://127.0.0.1:33248/$1 [P,L]
+RewriteRule ^(.*)$ http://127.0.0.1:33233/$1 [P,L]
 # DO NOT REMOVE. CLOUDLINUX PASSENGER CONFIGURATION END

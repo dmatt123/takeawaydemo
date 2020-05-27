@@ -41,7 +41,7 @@ router.post("/categories/new", isLoggedIn, async (req, res) => {
     categoryUrl: name.replace(/ /g, "_"),
     products: []
   });
-  res.redirect("/categories");
+  res.redirect("/admin/categories");
 });
 
 router.post("/categories/:id/delete", isLoggedIn, async (req, res) => {
@@ -64,7 +64,7 @@ for (prods of products) {
   const category = await categoryRepo.delete(req.params.id);
   await productsRepo.writeAll(products)
 
-  res.redirect("/categories");
+  res.redirect("/admin/categories");
 });
 
 router.get("/categories/:id/edit", isLoggedIn, async (req, res) => {
@@ -80,7 +80,7 @@ router.post("/categories/:id/edit", isLoggedIn, async (req, res) => {
   const changes = req.body;
   console.log(changes);
   await categoryRepo.update(req.params.id, changes);
-  res.redirect("/categories");
+  res.redirect("/admin/categories");
 });
 
 router.get(
@@ -112,7 +112,7 @@ router.post("/categories/changeRank/:id", isLoggedIn, async (req,res) => {
        }
       }
   await categoryRepo.update(req.params.id, category)
-  res.redirect(`/categories/${req.params.id}/addproducts`)
+  res.redirect(`/admin/categories/${req.params.id}/addproducts`)
 
 })
 
@@ -134,7 +134,7 @@ router.post(
       product.categories.push(req.params.id);
       await categoryRepo.update(req.params.id, { products: category.products });
       await productsRepo.update(product.id, { categories: product.categories });
-      res.redirect(`/categories/${category.id}/addproducts`);
+      res.redirect(`/admin/categories/${category.id}/addproducts`);
     } else {
       res.send("product already in category");
     }
@@ -160,7 +160,7 @@ console.log(categoryRemove)
   await categoryRepo.update(req.params.id, { products: itemsRemove });
   await productsRepo.update(productIdDelete, { categories: categoryRemove });
 
-  res.redirect(`/categories/${req.params.id}/addproducts`);
+  res.redirect(`/admin/categories/${req.params.id}/addproducts`);
 });
 
 module.exports = router;
