@@ -129,26 +129,35 @@ catch(err) {
 
 async function addPromo(cartId) {
     const notification = document.getElementById('userNotification');
- 
+ let response
 const spinner = document.getElementById('lds-hourglass')    
     const discount = document.getElementById('discountCodeInput').value;
 try {
     spinner.style.display="block";
-    const response = await axios.post(`/${cartId}/promos/${discount}`)
-    
+    response = await axios.post(`/${cartId}/promos/${discount}`)
     getCart(cartId)
 } 
     catch(err) {
         console.log(err)
         
     }
+    if (response) {
+        notification.style.display = 'block';
+        spinner.style.display="none";
+        notification.innerText = "Discount Code applied to cart"
+        setTimeout(function(){     notification.style.display = 'none';
+    }, 7000);   
+    } else {
+        notification.style.display = 'block';
+        spinner.style.display="none";
+        notification.innerText = "No discount code found"
+        setTimeout(function(){     notification.style.display = 'none';
+    }, 7000);   
+    }
+    
     getCart(cartId)
 
-    notification.style.display = 'block';
-    spinner.style.display="none";
-    notification.innerText = "Discount Code applied to cart"
-    setTimeout(function(){     notification.style.display = 'none';
-}, 7000);   
+  
  
 }
 
@@ -209,7 +218,7 @@ document.getElementById('sectionMenu').style.display="block";
 document.getElementById("postcodeSuccessMsg").innerText="GREAT! WE CAN DELIVER TO YOUR AREA";
 
 
-if (screen.width < 600) {
+if (document.body.clientWidth < 600) {
     console.log("screen is less than 600px wide")
     document.getElementById('cartMobile').style.display="block";
 }

@@ -77,32 +77,6 @@
   {
     "items": [
       {
-        "id": "11aba540-b06d5660",
-        "title": "Chicken Fried Rice",
-        "price": 6,
-        "extras": [
-          {
-            "name": "Boiled Rice",
-            "price": 0,
-            "id": "b06d5660"
-          }
-        ],
-        "quantity": 1
-      },
-      {
-        "id": "dc531293-8d54c6b0",
-        "title": "Chicken Balls in Batter",
-        "price": 6.1,
-        "extras": [
-          {
-            "name": "Chips",
-            "price": 0,
-            "id": "8d54c6b0"
-          }
-        ],
-        "quantity": 1
-      },
-      {
         "id": "7f68d36d-8d54c6b0",
         "title": "Curried Chicken",
         "price": 6.1,
@@ -114,9 +88,28 @@
           }
         ],
         "quantity": 1
+      },
+      {
+        "id": "67bf3a5c-8d54c6b0",
+        "title": "Deep Fried Shredded Crispy Chicken",
+        "price": 6.1,
+        "extras": [
+          {
+            "name": "Chips",
+            "price": 0,
+            "id": "8d54c6b0"
+          }
+        ],
+        "quantity": 1
       }
     ],
-    "discount": [],
+    "discount": {
+      "code": "20OFF",
+      "type": "%",
+      "discount": "20",
+      "creationDate": "May 22nd 2020, 9:22:16 am",
+      "id": "203f45a3"
+    },
     "id": "2e2a3e40"
   }
 ]
