@@ -209,7 +209,7 @@ document.getElementById('sectionMenu').style.display="block";
 document.getElementById("postcodeSuccessMsg").innerText="GREAT! WE CAN DELIVER TO YOUR AREA";
 
 
-if (document.body.clientWidth < 600) {
+if (screen.width < 600) {
     console.log("screen is less than 600px wide")
     document.getElementById('cartMobile').style.display="block";
 }
