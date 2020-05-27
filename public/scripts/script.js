@@ -42,6 +42,11 @@ async function addExtras(cartId, prodId, extrasId) {
 
     try {
         const response = await axios.post(`${cartId}/${prodId}/${extrasId}/add`)
+        const notification = document.getElementById('userNotification');
+        notification.style.display = 'block';
+        notification.innerText = "Item successfully added to your order"
+        setTimeout(function(){     notification.style.display = 'none';
+    }, 8000);
     } catch(err) {
         console.log(err)
     }
@@ -124,26 +129,35 @@ catch(err) {
 
 async function addPromo(cartId) {
     const notification = document.getElementById('userNotification');
- 
+ let response
 const spinner = document.getElementById('lds-hourglass')    
     const discount = document.getElementById('discountCodeInput').value;
 try {
     spinner.style.display="block";
-    const response = await axios.post(`/${cartId}/promos/${discount}`)
-    
+    response = await axios.post(`/${cartId}/promos/${discount}`)
     getCart(cartId)
 } 
     catch(err) {
         console.log(err)
         
     }
+    if (response) {
+        notification.style.display = 'block';
+        spinner.style.display="none";
+        notification.innerText = "Discount Code applied to cart"
+        setTimeout(function(){     notification.style.display = 'none';
+    }, 7000);   
+    } else {
+        notification.style.display = 'block';
+        spinner.style.display="none";
+        notification.innerText = "No discount code found"
+        setTimeout(function(){     notification.style.display = 'none';
+    }, 7000);   
+    }
+    
     getCart(cartId)
 
-    notification.style.display = 'block';
-    spinner.style.display="none";
-    notification.innerText = "Discount Code applied to cart"
-    setTimeout(function(){     notification.style.display = 'none';
-}, 7000);   
+  
  
 }
 
@@ -203,9 +217,17 @@ if (inputbox.value.length > 5 && inputbox.value.toUpperCase().includes(postcode)
 document.getElementById('sectionMenu').style.display="block";
 document.getElementById("postcodeSuccessMsg").innerText="GREAT! WE CAN DELIVER TO YOUR AREA";
 
+
+if (document.body.clientWidth < 600) {
+    console.log("screen is less than 600px wide")
+    document.getElementById('cartMobile').style.display="block";
+}
+
+
 if (date.getHours() < 16) {
     document.getElementById("postcodeSuccessMsg").innerText="The restaurant is currently closed but we are accepting pre-orders for this evening"
   }
+
 
 
 } else if (inputbox.value.length > 6) {

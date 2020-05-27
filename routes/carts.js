@@ -145,6 +145,7 @@ router.post("/:cartId/promos/:discount", async(req,res) => {
  const cartId = req.params.cartId
  
  promo = await promosRepo.getOneBy({code: code})
+ 
 cart = await cartsRepo.getOne(cartId);
  
 
@@ -154,6 +155,10 @@ cart = await cartsRepo.getOne(cartId);
 }
 
  await cartsRepo.update(cart.id, cart)
+
+ if (promo) {
+   res.status(200).json({message: "Valid Code"})
+} 
 
  console.log(cart)
 
@@ -184,6 +189,8 @@ await cartsRepo.update(cart.id, cart)
     const product = await productsRepo.getOne(item.id);
     item.product = product;
   }
+
+ 
 
   res.send(orderCompleteTemplate({cart}));
 

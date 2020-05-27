@@ -655,7 +655,9 @@ font-size: 1.5rem;
 
 
 @media (max-width: 600px) {
-
+#checkoutBtnMain {
+  top: 40%;
+}
   .header-banner__text-box { 
   font-size: 3rem;
   letter-spacing: 1.5rem;
@@ -673,9 +675,8 @@ font-size: 1.5rem;
 .cart {
   display: none
 }
-#cartMobile {
-  display: block;
-}
+
+
   }
 
   @media (max-width: 400px) {

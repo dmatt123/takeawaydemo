@@ -77,32 +77,39 @@
   {
     "items": [
       {
-        "id": "9d0df585-701eab09",
-        "title": "Spicy Mongolian",
-        "price": 4.5,
+        "id": "7f68d36d-8d54c6b0",
+        "title": "Curried Chicken",
+        "price": 6.1,
         "extras": [
           {
-            "name": "Lamb",
+            "name": "Chips",
             "price": 0,
-            "id": "701eab09"
+            "id": "8d54c6b0"
           }
         ],
         "quantity": 1
       },
       {
-        "id": "a7191c0e",
-        "title": "Steamed Tiger Prawns",
-        "price": 4.5,
-        "quantity": 1
-      },
-      {
-        "id": "a64af1b9",
-        "title": "Stir Fried Salt & Pepper Chicken",
-        "price": 4.5,
+        "id": "67bf3a5c-8d54c6b0",
+        "title": "Deep Fried Shredded Crispy Chicken",
+        "price": 6.1,
+        "extras": [
+          {
+            "name": "Chips",
+            "price": 0,
+            "id": "8d54c6b0"
+          }
+        ],
         "quantity": 1
       }
     ],
-    "discount": [],
+    "discount": {
+      "code": "20OFF",
+      "type": "%",
+      "discount": "20",
+      "creationDate": "May 22nd 2020, 9:22:16 am",
+      "id": "203f45a3"
+    },
     "id": "2e2a3e40"
   }
 ]
