@@ -9,8 +9,9 @@ try {
     notification.innerText = "Item successfully added to your order"
     setTimeout(function(){     notification.style.display = 'none';
 }, 4000);
-window.navigator.vibrate(200);
     getCart(cartId)
+    window.navigator.vibrate(200);
+
 
 } 
     catch(err) {
@@ -80,7 +81,7 @@ try {
       if (!items.extras) {
         extras = ``
       } else {
-        extras = `with ${items.extras[0].name}`
+        extras = ` - ${items.extras[0].name}`
       }
 
         itemTotal = items.quantity * items.price
@@ -150,6 +151,7 @@ try {
         notification.innerText = "Discount Code applied to cart"
         setTimeout(function(){     notification.style.display = 'none';
     }, 7000);   
+    window.navigator.vibrate(200);
     } else {
         notification.style.display = 'block';
         spinner.style.display="none";
@@ -175,6 +177,7 @@ notification.innerText = "Discount Code deleted from order"
 setTimeout(function(){     notification.style.display = 'none';
 }, 7000);   
 getCart(cartId)
+window.navigator.vibrate(200);
 }
 catch(err) {
     console.log(err)
@@ -191,7 +194,10 @@ async function deleteCartItem(prodId, cartId) {
         notification.style.display = 'block';
         notification.innerText = "Item successfully removed from order"
         setTimeout(function(){     notification.style.display = 'none';
-    }, 7000);        getCart(cartId)
+    }, 7000);       
+    window.navigator.vibrate(200);
+
+    getCart(cartId)
 
     } 
         catch(err) {
