@@ -9,6 +9,7 @@ try {
     notification.innerText = "Item successfully added to your order"
     setTimeout(function(){     notification.style.display = 'none';
 }, 4000);
+window.navigator.vibrate(200);
     getCart(cartId)
 
 } 
@@ -47,6 +48,8 @@ async function addExtras(cartId, prodId, extrasId) {
         notification.innerText = "Item successfully added to your order"
         setTimeout(function(){     notification.style.display = 'none';
     }, 8000);
+    window.navigator.vibrate(200);
+
     } catch(err) {
         console.log(err)
     }
