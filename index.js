@@ -45,8 +45,8 @@ const http = require('http');
 
 // const port = 8000;
 
-// port = 33233;
-// ip = `127.0.0.1`
+port = 3000;
+ip = `127.0.0.1`
 
 const server = http.createServer(app);
 
@@ -54,10 +54,10 @@ const server = http.createServer(app);
 //     console.log('App is listening on port 8000!')
 //   });
 
-  // server.listen(port, ip, () => {
-  //   console.log('App has started')
-  // });
+  server.listen(port, ip, () => {
+    console.log('App has started')
+  });
 
-  server.listen(process.env.PORT, process.env.IP, function() {
-  console.log("server has started")
-})
+//   server.listen(process.env.PORT, process.env.IP, function() {
+//   console.log("server has started")
+// })
