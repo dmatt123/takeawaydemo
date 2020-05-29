@@ -45,7 +45,7 @@ const http = require('http');
 
 // const port = 8000;
 
-port = 3000;
+port = 30000;
 ip = `127.0.0.1`
 
 const server = http.createServer(app);
