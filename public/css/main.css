@@ -676,7 +676,9 @@ font-size: 1.5rem;
 .cart {
   display: none
 }
-
+.menu {
+  width: 100vw;
+  }
 
   }
 
