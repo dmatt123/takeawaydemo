@@ -16,7 +16,7 @@ module.exports = ({ content, links }) => {
 <div class="header-banner__text-box"> Chopstix
 </div> 
 <div id="postcodeInput">
-<span class="postcodeInput_text">Check if we deliver to your area (use postcode DD1 1AA)</span> <input id="inputBoxPostcode" placeholder="ENTER YOUR POSTCODE"/></div>
+<span class="postcodeInput_text">Check if we deliver to your area <span style="font-size: 8px;">(use postcode DD1 1AA)</span></span> <input id="inputBoxPostcode" placeholder="ENTER YOUR POSTCODE"/></div>
 <div class="checkoutBtnContainer">
 <a href="/cart/review"><button id="checkoutBtnMain">CHECKOUT</button> </a>
 </div>
